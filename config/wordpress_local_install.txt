@@ -1,0 +1,42 @@
+$ mysql -u adminusername -p
+
+>create database lyxb;
+
+
+>GRANT ALL PRIVILEGES ON lyxb.* TO "test"@"localhost" IDENTIFIED BY "test";
+
+>FLUSH PRIVILEGES;
+
+>exit;
+
+# verify account created by logging in as as:
+$ mysql -u test -p
+> use lyxb;
+> show tables;
+> exit;
+
+# Create a copy of the config file.
+$ cd wordpress
+$ cp wp-config-example.php wp-config.php
+
+# Settings in wordpress/wp-config.php
+
+    // ** MySQL settings - You can get this info from your web host ** //
+    /** The name of the database for WordPress */
+    define('DB_NAME', 'lyxb');
+
+    /** MySQL database username */
+    define('DB_USER', 'test');
+
+    /** MySQL database password */
+    define('DB_PASSWORD', 'test');
+
+    /** MySQL hostname */
+    define('DB_HOST', 'localhost');
+
+
+    Enter your secret key values under the section labeled
+
+      * Authentication Unique Keys.
+
+put in /var/www:

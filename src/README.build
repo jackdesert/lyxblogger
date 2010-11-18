@@ -1,0 +1,78 @@
+#####################       A U T H O R       ##########################
+#                                                                      #
+#   Copyright 2010 Jack Desert                                         #
+#   <jackdesert556@gmail.com>                                          #
+#   <http://www.LetsEATalready.com>                                    #
+#                                                                      #
+######################      L I C E N S E     ##########################
+#                                                                      #
+#   This file is part of LyXBlogger.                                   #
+#                                                                      #
+#   LyXBlogger is free software: you can redistribute it and/or modify #
+#   it under the terms of the GNU General Public License as published  #
+#   by the Free Software Foundation, either version 3 of the License,  #
+#   or (at your option) any later version.                             #
+#                                                                      #
+#   LyXBlogger is distributed in the hope that it will be useful,      #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of     #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      #
+#   GNU General Public License for more details.                       #
+#                                                                      #
+#   You should have received a copy of the GNU General Public License  #
+#   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. #
+#                                                                      #
+########################################################################
+
+# USING COALESCE.PY
+---------------------------------------------------------------
+C R E D I T S
+
+The following files:
+    coalesce.py
+    make
+
+and the following folders:
+    io
+    util
+
+are the work of Alex Fernández, the creator of eLyXer.
+For more information, see www.nongnu.org/elyxer.
+
+As eLyXer is also released under the GNU General
+Public License v3, we will use it. Thanks, Alex!
+
+-----------------------------------------------------------------
+C O A L E S C E . P Y
+
+A couple of notes on using the coalesce library to turn a modular
+system into an executable:
+
+1. When one file in a package calls another file in the same
+package, coalesce.py requires that the second file be called
+from its full package address, not its local relative. For
+example, if there are two source files in Package_A:
+
+     file_1.py
+     file_2.py
+
+Then from within file_1.py, to use file_2.py, you must import it like this:
+
+     import Package_A.file_2
+
+
+You will get a "file not found" error if you import it like this:
+
+     import file_2
+
+Even though that normally works in Python.
+
+--------------------------------------------------------------------
+M A K E
+
+To create the executable, simply run ./make from this folder.
+
+
+The other quirk to be aware of is that coalesce.py must be in your src
+directory. That is, in the same directory as the main file you are
+going to turn into a standalong executable, and also the same directory
+where your package folders reside.

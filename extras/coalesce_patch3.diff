@@ -1,0 +1,22 @@
+Index: coalesce.py
+===================================================================
+--- coalesce.py	(revisión: 447)
++++ coalesce.py	(copia de trabajo)
+@@ -37,7 +37,7 @@
+     self.files = []
+     self.directory = ''
+     self.writer = None
+-
++  
+   def convert(self, filename, directory = ''):
+     "Convert the filename adding the appropriate directories."
+     if os.path.exists(filename):
+@@ -101,8 +101,6 @@
+         newname = self.convert(nextname, os.path.dirname(filename))
+         if newname:
+           self.coalesce(newname)
++        else:
++          self.writer.writeline(line)   # This line makes things like "from socket import gaierror" work
+       elif line.startswith('#'):
+         if self.comments:
+           self.writer.writeline(line)

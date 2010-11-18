@@ -1,0 +1,44 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+#####################       A U T H O R       ##########################
+#                                                                      #
+#   Copyright 2010 Jack Desert                                         #
+#   <jackdesert556@gmail.com>                                          #
+#   <http://www.LetsEATalready.com>                                    #
+#                                                                      #
+######################      L I C E N S E     ##########################
+#                                                                      #
+#   This file is part of LyXBlogger.                                   #
+#                                                                      #
+#   LyXBlogger is free software: you can redistribute it and/or modify #
+#   it under the terms of the GNU General Public License as published  #
+#   by the Free Software Foundation, either version 3 of the License,  #
+#   or (at your option) any later version.                             #
+#                                                                      #
+#   LyXBlogger is distributed in the hope that it will be useful,      #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of     #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      #
+#   GNU General Public License for more details.                       #
+#                                                                      #
+#   You should have received a copy of the GNU General Public License  #
+#   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. #
+#                                                                      #
+########################################################################
+
+# this script plays Eric Clapton
+
+import os
+# Set volume control
+
+
+#~ os.system('amixer -c 0 -- sset Master playback -20dB')
+
+# Note that the 'unmute' feature doesn't work, so make sure sound is not muted begore you run this.
+# >/dev/null stops stdout
+# -really-quiet stops stdout
+os.system('amixer -c 0 -- sset Master playback -20dB > /dev/null')
+
+# Play Eric Clapton
+os.system('mplayer -msglevel all=-1 ~/Música/Eric\ Clapton/Unplugged/Layla.mp3')
+print 'jack says hi'
+

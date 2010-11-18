@@ -1,0 +1,759 @@
+#LyX 2.0.0beta1 created this file. For more info see http://www.lyx.org/
+\lyxformat 407
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
+%                                                                      
+%   Copyright 2010 Jack Desert                                         
+%   <jackdesert556@gmail.com>                                          
+%   <http://www.LetsEATalready.com>                                    
+%                                                                      
+%%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
+%                                                                      
+%   This file is part of LyXBlogger.                                   
+%                                                                      
+%   LyXBlogger is free software: you can redistribute it and/or modify 
+%   it under the terms of the GNU General Public License as published  
+%   by the Free Software Foundation, either version 3 of the License,  
+%   or (at your option) any later version.                             
+%                                                                      
+%   LyXBlogger is distributed in the hope that it will be useful,      
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of     
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      
+%   GNU General Public License for more details.                       
+%                                                                      
+%   You should have received a copy of the GNU General Public License  
+%   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. 
+%                                                                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_xetex false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+LyXBlogger Changelog
+\end_layout
+
+\begin_layout Author
+Jack Desert (jackdesert556@gmail.com)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap table
+lines 0
+placement r
+overhang 0in
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Home"
+target "index.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Download"
+target "http://download.savannah.gnu.org/releases-noredirect/lyxblogger/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Change Log"
+target "changelog.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "User Guide"
+target "userguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Development Guide"
+target "devguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This document  lists all public versions, the date they were released on
+ and the changes they contain.
+ For more information about LyXBlogger visit the main page 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+index.html
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Version 0.38
+\end_layout
+
+\begin_layout Standard
+svn: 528+
+\end_layout
+
+\begin_layout Itemize
+Multiple categories per post by entering as 1,2
+\end_layout
+
+\begin_layout Itemize
+Interactively saves each blog profile as you use it
+\end_layout
+
+\begin_layout Itemize
+Each profile can be saved with or without a plain text password
+\end_layout
+
+\begin_layout Itemize
+Ships with eLyXer 1.0.4
+\end_layout
+
+\begin_layout Subsection*
+Version 0.37
+\end_layout
+
+\begin_layout Standard
+svn: 490
+\end_layout
+
+\begin_layout Itemize
+Fixed a bug from 0.36 where images were not showing up
+\end_layout
+
+\begin_layout Itemize
+Modified text prompts
+\end_layout
+
+\begin_layout Itemize
+Slimmed down the interactive testing module
+\end_layout
+
+\begin_layout Itemize
+Added a slight delay after Copyright information displays
+\end_layout
+
+\begin_layout Subsection*
+Version 0.36
+\end_layout
+
+\begin_layout Standard
+svn: 484
+\end_layout
+
+\begin_layout Itemize
+Allows updating of previous posts
+\end_layout
+
+\begin_layout Itemize
+Retrieves previous post headers from server
+\end_layout
+
+\begin_layout Itemize
+Option to display all previous post titles if desired post is not in most
+ recent nine
+\end_layout
+
+\begin_layout Itemize
+Clarified userguide as to which machine (client or server) requires which
+ software
+\end_layout
+
+\begin_layout Itemize
+Improved exception handling by looking for specific exceptions in try /
+ except statements
+\end_layout
+
+\begin_layout Itemize
+Adds unit tests for exception handlers
+\end_layout
+
+\begin_layout Itemize
+Changed download link in docs to point to no-redirect site
+\end_layout
+
+\begin_layout Itemize
+Implemented multiple test scenarios in interactive_test.py
+\end_layout
+
+\begin_layout Itemize
+USER DEFINED VARIABLES now takes plain urls, without the '/xmlrpc.php' ending
+\end_layout
+
+\begin_layout Subsection*
+Version 0.35
+\end_layout
+
+\begin_layout Standard
+svn 449
+\end_layout
+
+\begin_layout Itemize
+Added exception handling for common exceptions.
+\end_layout
+
+\begin_layout Itemize
+Added short, meaningful error messages for when Internet is not available,
+ domain is invalid, username/password mismatch, and called without sufficient
+ args.
+\end_layout
+
+\begin_layout Itemize
+LyXBlogger window displays 
+\begin_inset Quotes eld
+\end_inset
+
+LyXBlogger
+\begin_inset Quotes erd
+\end_inset
+
+ as its window title.
+\end_layout
+
+\begin_layout Itemize
+Window stays open on Microsoft Windows, even when an exception is thrown.
+\end_layout
+
+\begin_layout Itemize
+On any supported operating system, ENTER closes the LyXBlogger window when
+ done.
+\end_layout
+
+\begin_layout Itemize
+Changed the names of two directories used for testing to use extended Latin
+ characters instead of cyrillic characters.
+ This fixed a bug where one could not unzip on a Windows filesystem.
+\end_layout
+
+\begin_layout Itemize
+Coalesce.py is cleaner, and can handle general imports like 
+\begin_inset Quotes eld
+\end_inset
+
+from socket import gaierror
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Added unit testing for coalesce.py.
+\end_layout
+
+\begin_layout Subsection*
+Version 0.34
+\end_layout
+
+\begin_layout Standard
+svn: 429
+\end_layout
+
+\begin_layout Itemize
+Converted documentation model to include LyX masters in docs/raw and html
+ exports in docs.
+\end_layout
+
+\begin_layout Itemize
+Put everything from original wiki page into documentation.
+\end_layout
+
+\begin_layout Itemize
+Now includes a user guide, development guide.
+ 
+\end_layout
+
+\begin_layout Itemize
+Changed images used in examples to public domain images.
+\end_layout
+
+\begin_layout Itemize
+LyXBlogger now looks for input file content, rather than input file extension,
+ to determine which converter was used to produce it.
+ 
+\end_layout
+
+\begin_layout Itemize
+Informs user of whichever supported format user is not using.
+\end_layout
+
+\begin_layout Itemize
+Added unit tests to file-type-checking code.
+\end_layout
+
+\begin_layout Itemize
+Added instructions in development guide on how to call seed.py as a script
+ if desired.
+ 
+\end_layout
+
+\begin_layout Itemize
+Changed directory structure of example docs
+\end_layout
+
+\begin_layout Itemize
+Changed md5sums for basic_blog.html annd basic_blog.xhtml
+\end_layout
+
+\begin_layout Itemize
+Added interact.py to be able to test in interactive mode.
+\end_layout
+
+\begin_layout Itemize
+Unit tests now run on Python 2.4, 2.5, and 2.6 consecutively.
+\end_layout
+
+\begin_layout Itemize
+Changed distribution model so that all unit tests must pass before executable
+ module is constructed.
+\end_layout
+
+\begin_layout Itemize
+Renamed internal variables related to relative directory locations so code
+ is more understandable.
+\end_layout
+
+\begin_layout Itemize
+Moved hosting to www.nongnu.org/lyxblogger
+\end_layout
+
+\begin_layout Itemize
+Moved functional code inside main() and only call main if __name__ == '__main__'
+ This makes sure that you can run __import__('lyxblogger') without lib/configure.
+py crashing 
+\end_layout
+
+\begin_layout Itemize
+Updated instructions on how to configure LyX 2.0 to use eLyXer as its default
+ LyX -> xhtml converter
+\end_layout
+
+\begin_layout Subsection*
+Version 0.33b (Beta release only -- non production) 
+\end_layout
+
+\begin_layout Standard
+svn:387 
+\end_layout
+
+\begin_layout Itemize
+Changed name from LyxBlogger to LyXBlogger 
+\end_layout
+
+\begin_layout Itemize
+Moved wiki page to http://wiki.lyx.org/Tools/LyXBlogger 
+\end_layout
+
+\begin_layout Itemize
+Module filename changed to lyxblogger.py 
+\end_layout
+
+\begin_layout Itemize
+Uses coalesce.py to create python file from several smaller modules 
+\end_layout
+
+\begin_layout Itemize
+Includes some unit testing 
+\end_layout
+
+\begin_layout Itemize
+Release is now in compressed format 
+\end_layout
+
+\begin_layout Itemize
+License header added to all files make file included 
+\end_layout
+
+\begin_layout Itemize
+Includes two setup options.
+ Default includes elyxer and wordpresslib 
+\end_layout
+
+\begin_layout Itemize
+Organization of source code structure 
+\end_layout
+
+\begin_layout Itemize
+Added license headers on all text files
+\end_layout
+
+\begin_layout Subsection*
+Version 0.33a (Alpha release only -- non production) 
+\end_layout
+
+\begin_layout Standard
+svn:343 
+\end_layout
+
+\begin_layout Itemize
+Added support for Microsoft Windows.
+ 
+\end_layout
+
+\begin_layout Itemize
+Now works on at least three platforms: GNU/Linux, Mac OSX, and Windows.
+ 
+\end_layout
+
+\begin_layout Itemize
+More specifically: tested on Ubuntu 9.10, OSX, and Vista 32-bit.
+ 
+\end_layout
+
+\begin_layout Itemize
+Provides different instructions for closing the windows based on os detection.
+ 
+\end_layout
+
+\begin_layout Itemize
+In this version, LyXBlogger installs as a python module instead of as an
+ executable.
+ 
+\end_layout
+
+\begin_layout Itemize
+Name of python module in this version was not lyxblogger, but subsequent
+ versions revert to lyxblogger.
+\end_layout
+
+\begin_layout Itemize
+Changed license to GNU General Public License version 3.
+\end_layout
+
+\begin_layout Subsection*
+Version 0.32 
+\end_layout
+
+\begin_layout Standard
+svn:324 
+\end_layout
+
+\begin_layout Itemize
+MODELS: models will remain the same as those shown for 0.31 unless otherwise
+ noted.
+ 
+\end_layout
+
+\begin_layout Itemize
+Removes "Converted document" string used by eLyXer for blogs with no other
+ title.
+ 
+\end_layout
+
+\begin_layout Itemize
+Added error checking to make sure title isn't inadvertently posted twice.
+ 
+\end_layout
+
+\begin_layout Itemize
+Prompts user whether to use default credentials or enter new ones.
+ 
+\end_layout
+
+\begin_layout Itemize
+Test site moved to blogtest.letseatalready.com.
+ 
+\end_layout
+
+\begin_layout Itemize
+Converted print() statements to sys.stdout.write instead of print() in order
+ to facilitate an automated test suite.
+ 
+\end_layout
+
+\begin_layout Itemize
+Changed documentation model to include README.html, which is a snapshot in
+ time of the LyXBlogger wiki page.
+\end_layout
+
+\begin_layout Subsection*
+Version 0.31 
+\end_layout
+
+\begin_layout Standard
+svn:281 
+\end_layout
+
+\begin_layout Itemize
+MODELS: 
+\end_layout
+
+\begin_layout Itemize
+LyX --> LyXHTML --> filters --> XML-RPC 
+\end_layout
+
+\begin_layout Itemize
+LyX --> eLyXer --> filters --> XML-RPC 
+\end_layout
+
+\begin_layout Itemize
+Added support for eLyXer created documents.
+ 
+\end_layout
+
+\begin_layout Itemize
+Automatically detects input format based on file type (.xhtml = LyXHTML,
+ .html = eLyXer) 
+\end_layout
+
+\begin_layout Itemize
+Improved documentation for implementing as a converter.
+ 
+\end_layout
+
+\begin_layout Itemize
+Includes a username and password to do test posting to http://zippermania.wordpre
+ss.com 
+\end_layout
+
+\begin_layout Subsection*
+Version 0.30 
+\end_layout
+
+\begin_layout Standard
+svn: ??? 
+\end_layout
+
+\begin_layout Itemize
+MODEL: LyX --> LyXHTML --> filters --> XML-RPC 
+\end_layout
+
+\begin_layout Itemize
+First release of LyXBlogger using XML-RPC 
+\end_layout
+
+\begin_layout Itemize
+Uses input from LyX 2.0 (internal) LyXHTML format.
+ 
+\end_layout
+
+\begin_layout Itemize
+Uploads both text and images to server Allows user to be prompted for credention
+s or to save them in file 
+\end_layout
+
+\begin_layout Itemize
+Spawns its own xterm window to display error messages 
+\end_layout
+
+\begin_layout Itemize
+Retrieves category list from server and allows selection of one category.
+ 
+\end_layout
+
+\begin_layout Itemize
+Retains option for CUT_FLAG (ignores anything belows the CUT_FLAG) 
+\end_layout
+
+\begin_layout Itemize
+Removes title from body and uses it as the post title
+\end_layout
+
+\begin_layout Subsection*
+Version 0.20 
+\end_layout
+
+\begin_layout Standard
+svn: ??? 
+\end_layout
+
+\begin_layout Itemize
+MODEL: LyX --> LyXHTML --> filters --> Xclip 
+\end_layout
+
+\begin_layout Itemize
+Same as Version 0.15 except: Uses LyX 2.0 (internal) LyXHTML format
+\end_layout
+
+\begin_layout Subsection*
+Version 0.15 
+\end_layout
+
+\begin_layout Standard
+svn: ??? 
+\end_layout
+
+\begin_layout Itemize
+MODEL: LyX --> eLyXer --> filters --> Xclip 
+\end_layout
+
+\begin_layout Itemize
+Mostly the same as 0.05 except that eLyXer is being used for html 
+\end_layout
+
+\begin_layout Itemize
+CUT_FLAG is implemented (ignores anything below the CUT_FLAG) 
+\end_layout
+
+\begin_layout Itemize
+Removes arrows from eLyXer footnote references.
+\end_layout
+
+\begin_layout Subsection*
+Version 0.05 
+\end_layout
+
+\begin_layout Standard
+svn: ??? 
+\end_layout
+
+\begin_layout Itemize
+MODEL: LyX --> TtH --> filters --> Xclip 
+\end_layout
+
+\begin_layout Itemize
+Original prototype of LyXBlogger which used Xclip.
+\end_layout
+
+\begin_layout Itemize
+Takes the output from TtH, stripped unneeded content, and copied the resulting
+ html code to the clipboard using Xclip.
+ 
+\end_layout
+
+\begin_layout Itemize
+This allowed a user to easily paste code into a browser-based blog composition
+ window.
+\end_layout
+
+\end_body
+\end_document

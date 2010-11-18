@@ -1,0 +1,617 @@
+#LyX 2.0.0beta1 created this file. For more info see http://www.lyx.org/
+\lyxformat 407
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
+%                                                                      
+%   Copyright 2010 Jack Desert                                         
+%   <jackdesert556@gmail.com>                                          
+%   <http://www.LetsEATalready.com>                                    
+%                                                                      
+%%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
+%                                                                      
+%   This file is part of LyXBlogger.                                   
+%                                                                      
+%   LyXBlogger is free software: you can redistribute it and/or modify 
+%   it under the terms of the GNU General Public License as published  
+%   by the Free Software Foundation, either version 3 of the License,  
+%   or (at your option) any later version.                             
+%                                                                      
+%   LyXBlogger is distributed in the hope that it will be useful,      
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of     
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      
+%   GNU General Public License for more details.                       
+%                                                                      
+%   You should have received a copy of the GNU General Public License  
+%   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. 
+%                                                                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_xetex false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+LyXBlogger
+\end_layout
+
+\begin_layout Section*
+\begin_inset Wrap table
+lines 0
+placement r
+overhang 0in
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Home"
+target "index.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Download"
+target "http://download.savannah.gnu.org/releases-noredirect/lyxblogger/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Change Log"
+target "changelog.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "User Guide"
+target "userguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Development Guide"
+target "devguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Premise
+\end_layout
+
+\begin_layout Standard
+LyX really is a new way of thinking about documents.
+ There is a bit of a learning curve about it, but once you get the formatting
+ set up the way you want it, each successive chapter in your book sets up
+ exactly the same-- automatically.
+ It also prevents you from doing things that don't normally make sense,
+ like putting two spaces between a word, or a space at the beginning of
+ a paragraph.
+ It won't even let you accidentally (or on purpose) put two blank lines
+ between paragraphs.
+ Content is content and layout is layout - and LyX does a good job keeping
+ them separate.
+\end_layout
+
+\begin_layout Standard
+So many of us have become LyX addicts for these and other reasons.
+ But when one wants to publish to the web, as in creating an online blog,
+ there comes a dilemma of the having your cake and eating it too variety.
+ Of course LyX users still want to compose everything they do in LyX.
+ But blogging engines, such as WordPress, don't speak LyX, and they don't
+ understand PDF either.
+ They hunger for none other than xhtml.
+ Ah, but how to get your beautiful looking, carefully arranged document
+ from LyX to WordPress, while retaining your document's organization and
+ allowing you to still manage your own CSS style file to tweak the formatting?
+\end_layout
+
+\begin_layout Standard
+LyX die-hards have done it the hard way before.
+ Like composing a document in LyX, then copying the screen into the blog
+ engine composition window, and re-adding any formatting that was lost for
+ titles, headings, emphasis, lists, and so on.
+ Well those days are over.
+ Now you can talk directly from LyX to your favorite blogging engine.
+ That is, as long as your favorite blogging engine is WordPress.
+ 
+\end_layout
+
+\begin_layout Section*
+Solution
+\end_layout
+
+\begin_layout Standard
+LyXBlogger allows you to post to your WordPress blog right from LyX.
+ Recent versions include the following features:
+\end_layout
+
+\begin_layout Itemize
+Provides XML-RPC connectivity to WordPress Blogs 
+\end_layout
+
+\begin_layout Itemize
+Uploads images and formatted text automatically 
+\end_layout
+
+\begin_layout Itemize
+Supports eLyXer XHTML format 
+\end_layout
+
+\begin_layout Itemize
+Supports LyX 2.0 (internal) LyXHTML format 
+\end_layout
+
+\begin_layout Itemize
+Extracts title from document and uses it as the posting title 
+\end_layout
+
+\begin_layout Itemize
+Preserves document organization hierarchy as CSS classes 
+\end_layout
+
+\begin_layout Itemize
+Provides consistent look among all your blog entries based on your master
+ CSS file 
+\end_layout
+
+\begin_layout Itemize
+Retrieves category list from server to allow user selection 
+\end_layout
+
+\begin_layout Itemize
+Gives option to post to test site at blogtest.letseatalready.com 
+\end_layout
+
+\begin_layout Itemize
+Displays messages and gets user input through xterm window 
+\end_layout
+
+\begin_layout Section*
+Screenshot
+\end_layout
+
+\begin_layout Standard
+Here is a screenshot of LyXBlogger 0.38_BETA_1 running on Ubuntu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/screenshot.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Download
+\end_layout
+
+\begin_layout Standard
+LyXBlogger is available as a free download from the GNU 
+\begin_inset CommandInset href
+LatexCommand href
+name "mirrors"
+target "https://savannah.nongnu.org/files/?group=lyxblogger"
+
+\end_inset
+
+.
+ If the mirrors don't show a brand new release yet (a 24 hour delay is typical),
+ try the 
+\begin_inset CommandInset href
+LatexCommand href
+name "direct link"
+target "http://download.savannah.gnu.org/releases-noredirect/lyxblogger/"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+Installation
+\end_layout
+
+\begin_layout Standard
+LyXBlogger is installed as a Python module.
+ For instructions, see the 
+\begin_inset CommandInset href
+LatexCommand href
+name "user's guide"
+target "userguide.html#sub:System-Requirements"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Supported xhtml converters for LyX 1.6.x
+\end_layout
+
+\begin_layout Itemize
+eLyXer 
+\end_layout
+
+\begin_layout Subsection*
+Supported xhtml converters for LyX 2.0
+\end_layout
+
+\begin_layout Itemize
+eLyXer 
+\end_layout
+
+\begin_layout Itemize
+LyXHTML (Internal in LyX 2.0) 
+\end_layout
+
+\begin_layout Section*
+Usage
+\end_layout
+
+\begin_layout Standard
+LyXBlogger is called from the export menu of LyX.
+ First, see if LyXBlogger is already listed in your LyX export menu.
+ If it's not, see the 
+\begin_inset CommandInset href
+LatexCommand href
+name "user's guide"
+target "userguide.html#sub:LyX-Integration"
+
+\end_inset
+
+ for help in setting it up.
+\end_layout
+
+\begin_layout Standard
+Alternatively, LyXBlogger can be invoked from the command line as 
+\end_layout
+
+\begin_layout LyX-Code
+$ python -m lyxblogger <input_file>
+\end_layout
+
+\begin_layout Standard
+See the 
+\begin_inset CommandInset href
+LatexCommand href
+name "user's guide"
+target "userguide.html#Command-Line-Usage"
+
+\end_inset
+
+ for details.
+ 
+\end_layout
+
+\begin_layout Section*
+Test Drive
+\end_layout
+
+\begin_layout Standard
+LyXBlogger comes out of the box ready to upload to a test site (blogtest.letseata
+lready.com) where you can test its posting capability.
+ LyXBlogger will ask you whether to post to the test site or not.
+ For details, see see the 
+\begin_inset CommandInset href
+LatexCommand href
+name "user's guide"
+target "userguide.html#sub:Test-Drive"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+History
+\end_layout
+
+\begin_layout Standard
+For the literary inclined, you can read about the initial work on LyXBlogger
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "http://letseatalready.com/2010/03/08/lyxposter-blogging-with-lyx/"
+
+\end_inset
+
+, 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "http://letseatalready.com/2010/03/17/lyxblogger/"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "http://letseatalready.com/2010/03/23/lyxblogger-goes-xml-rpc/"
+
+\end_inset
+
+.
+ For the technically inclined, see the official 
+\begin_inset CommandInset href
+LatexCommand href
+name "change log"
+target "changelog.html"
+
+\end_inset
+
+.
+ For the rest of you, here is the history of LyXBlogger in a nutshell:
+\end_layout
+
+\begin_layout Itemize
+0.38 Added support for multiple saved profiles
+\end_layout
+
+\begin_layout Itemize
+0.37 Fixed a bug from 0.36 where images didn't show up
+\end_layout
+
+\begin_layout Itemize
+0.36 Allows editing of previous posts
+\end_layout
+
+\begin_layout Itemize
+0.35 Added sane exception handling and clear error messages.
+\end_layout
+
+\begin_layout Itemize
+0.34 Added support for Microsoft Windows.
+ Verified support for Mac OS X.
+ Changed name to LyXBlogger (with a capital 
+\begin_inset Quotes eld
+\end_inset
+
+X
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Modularized source code and used 
+\begin_inset CommandInset href
+LatexCommand href
+name "eLyXer's"
+target "http://www.nongnu.org/elyxer/"
+
+\end_inset
+
+ coalesce.py to form it into one module for distribution.
+ Includes unit testing code.
+ Changed release license to 
+\begin_inset CommandInset href
+LatexCommand href
+name "GNU GPL3"
+target "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+0.32: Asks for confirmation before uploading to default domain.
+ Prompts for a new title if eLyXer's default of 'Converted document' is
+ found.
+ 
+\end_layout
+
+\begin_layout Itemize
+0.31: Adds eLyXer support for LyX 1.6.x and 2.0 
+\end_layout
+
+\begin_layout Itemize
+0.30: Changed to xml-rpc connectivity for automated posting of xhtml and
+ images.
+ Runs on LyX 2.0 (internal) LyXHTML format.
+ 
+\end_layout
+
+\begin_layout Itemize
+0.20 and previous: Initial releases pasted html code to the clipboard so
+ it was ready to paste wherever you needed it, like into a text editor or
+ a browser-based composition window.
+ This still has a lot of usefulness for creating forum posts and for other
+ projects, too.
+ May be revived in the future under another project name.
+ 
+\end_layout
+
+\begin_layout Section*
+Contact 
+\end_layout
+
+\begin_layout Standard
+For questions, support, and bug reports, you can contact the main developer
+ at 
+\begin_inset CommandInset href
+LatexCommand href
+name "JackDesert556@gmail.com"
+target "mailto:jackdesert556@gmail.com"
+type "mailto:"
+
+\end_inset
+
+.
+ By doing so you can help the author improve LyXBlogger for future users.
+ You can send your sample documents with a description of the errors encountered.
+ Any documents sent will be treated with the utmost confidentiality.
+\end_layout
+
+\begin_layout Section*
+Acknowledgments
+\end_layout
+
+\begin_layout Standard
+Thanks to 
+\begin_inset CommandInset href
+LatexCommand href
+name "Becky Carson"
+target "http://beckycarson.com"
+
+\end_inset
+
+ for inspiring me to become a blogger.
+ Thanks to Bruce Veidt for coining the name LyXBlogger.
+ Thanks to Alex Fernandez for producing one of the xhtml converters that
+ LyXBlogger works with, 
+\begin_inset CommandInset href
+LatexCommand href
+name "eLyXer"
+target "http://www.nongnu.org/elyxer/"
+
+\end_inset
+
+, for creating complete documentation which was easy to modify for this
+ site, and for providing much-needed background information about how to
+ integrate a Python project with LyX.
+ Thanks to Anne Geoghegan for letting me test LyXBlogger on her Mac.
+ Thanks to Andrea Bussinger for her continued support as I sat on my throne
+ and typed away.
+ Thanks to Richard Heck for reviewing LyX / LyXBlogger integration patches.
+ Thank you Kevin Unhammer for drafting support for multiple profiles.
+ Thanks to nongnu.org for hosting this project.
+ Thanks to those who have asked for clarification, that the documentation
+ may improve.
+\end_layout
+
+\end_body
+\end_document

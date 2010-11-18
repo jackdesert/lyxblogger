@@ -1,0 +1,54 @@
+# This is what I did to get my Compaq Presario R3000 to hibernate with
+# Ubuntu 9.10:
+
+
+#############         W I R E L E S S         ##########################
+Install the Broadcom 4306 using System -> Administration ->
+Hardware_Controllers. If it doesn't work, the button may have been
+pressed, turning the card off. Boot to Windows, press the button until
+you have it working, then tape a block over the button so you can't push
+it anymore.
+
+If you hibernate or suspend, the module will be removed first. After
+you resume, just type
+$ sudo modprobe -r b43
+$ sudo modprobe b43
+to get it restarted.
+
+alternatively, have the remove statement added to hal-system-power-hibernate-linux
+
+
+#############         H I B E R N A T E       ##########################
+
+Link: http://ubuntuforums.org/showthread.php?t=1307618&page=28
+In a nutshell,
+Open sudo gedit and open /usr/lib/hal/scripts/linux/hal-system-power-suspend-linux
+
+find the line QUIRKS=" "
+
+change the line to QUIRKS="--quirk-s3-bios --quirk-s3-mode
+--quirk-dpms-suspend --quirk-dpms-on --quirk-vbestate-restore
+--quirk-vbemode-restore --quirk-vga-mode3 --quirk-vbe-post
+--quirk-reset-brightness"
+
+"not all may be necessary, but it hasn't done any harm; you can experiment if you want."
+
+
+##################   S U S P E N D         #############################
+
+## This only worked once for suspend. After that, it crashed.
+
+
+$ sudo vi /etc/default/grub
+# Add radeon.modeset=0 to the end of the line GRUB_CMDLINE_LINUX_DEFAULT=.
+$ sudo update-grub
+
+
+
+References:
+http://ubuntuforums.org/showthread.php?p=8332440#post8332440
+    Ok,
+    I am not recommending this to anyone, so try at your own risk!!
+    It seems I can now successfully suspend, at least 5 times so far
+    and resume properly, using the following parameters:
+    Kernel from mainline - 2.6.32-rc7, using parameter "modeset=0"

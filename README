@@ -1,0 +1,51 @@
+#######################  L Y X B L O G G E R    ########################
+#                                                                      #
+#   This program allows you to post to your WordPress blog right from  #
+#   LyX.                                                               #
+#                                                                      #
+#   LyXBlogger is hosted at www.nongnu.org/lyxblogger.                 #
+#                                                                      #
+#################     D O C U M E N T A T I O N       ##################
+#                                                                      #
+#   Open docs/index.html in your favorite browser to view the full     #
+#   documentation for LyXBlogger. Alternatively, view the online docs  #
+#   for the most current version of LyXBlogger at                      #
+#   www.nongnu.org/lyxblogger.                                         #
+#                                                                      #
+#   Please submit any issues or suggestions to the author, listed      #
+#   below.                                                             #
+#                                                                      #
+#####################      A U T H O R        ##########################
+#                                                                      #
+#   Copyright (C) 2010 Jack Desert                                     #
+#   jackdesert556@gmail.com                                            #
+#   http://www.LetsEATalready.com                                      #
+#                                                                      #
+######################      L I C E N S E     ##########################
+#                                                                      #
+#   This file is part of LyXBlogger.                                   #
+#                                                                      #
+#   LyXBlogger is free software: you can redistribute it and/or modify #
+#   it under the terms of the GNU General Public License as published  #
+#   by the Free Software Foundation, either version 3 of the License,  #
+#   or (at your option) any later version.                             #
+#                                                                      #
+#   LyXBlogger is distributed in the hope that it will be useful,      #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of     #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      #
+#   GNU General Public License for more details.                       #
+#                                                                      #
+#   You should have received a copy of the GNU General Public License  #
+#   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. #
+#                                                                      #
+#####################     I M A G E S        ###########################
+#                                                                      #
+#  The images named                                                    #
+#     screw30006.jpg                                                   #
+#  and                                                                 #
+#     spanner0090049.jpg                                               #
+#  located in various subdirectories of src/LyxBlog/test_files were    #
+#  created by Jack Desert and are in the public domain. You may do     #
+#  with them as you wish.                                              #
+#                                                                      #
+########################################################################

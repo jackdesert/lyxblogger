@@ -1,0 +1,39 @@
+#######################     A U T H O R       ##########################
+#                                                                      #
+#   Copyright 2010 Jack Desert                                         #
+#   <jackdesert556@gmail.com>                                          #
+#   <http://www.LetsEATalready.com>                                    #
+#                                                                      #
+######################      L I C E N S E     ##########################
+#                                                                      #
+#   This file is part of LyXBlogger.                                   #
+#                                                                      #
+#   LyXBlogger is free software: you can redistribute it and/or modify #
+#   it under the terms of the GNU General Public License as published  #
+#   by the Free Software Foundation, either version 3 of the License,  #
+#   or (at your option) any later version.                             #
+#                                                                      #
+#   LyXBlogger is distributed in the hope that it will be useful,      #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of     #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      #
+#   GNU General Public License for more details.                       #
+#                                                                      #
+#   You should have received a copy of the GNU General Public License  #
+#   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. #
+#                                                                      #
+########################################################################
+
+'''These are the instructions for installing LyXBlogger on your machine.
+Open a shell. (cmd on Windows)
+Navigate to the same directory where this file is located.
+
+To install normally (includes wordpresslib and elyxer):
+  python setup.py install
+
+To install without installing elyxer (still includeds wordpresslib)
+  python setup-no-elyxer.py install
+
+LyXBlogger is now installed as a module on your system. You invoke it 
+by calling 
+  python -m lyxblogger input_file.(x)html
+

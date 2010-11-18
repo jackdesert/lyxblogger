@@ -1,0 +1,6 @@
+Putting files in
+--Esta línea y las que están debajo serán ignoradas--
+
+A  + LyxBlog/test_files/images
+A  + LyxBlog/test_files/images/imág enes
+D    LyxBlog/image_test.py

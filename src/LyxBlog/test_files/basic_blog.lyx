@@ -1,0 +1,148 @@
+#LyX 2.0.0svn created this file. For more info see http://www.lyx.org/
+\lyxformat 380
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%       A U T H O R
+%                                                                      
+%   Copyright 2010 Jack Desert                                         
+%   <jackdesert556@gmail.com>                                          
+%   <http://www.LetsEATalready.com>                                    
+%                                                                      
+%      L I C E N S E
+%                                                                      
+%   This file is part of LyXBlogger.                                   
+%                                                                      
+%   LyXBlogger is free software: you can redistribute it and/or modify 
+%   it under the terms of the GNU General Public License as published  
+%   by the Free Software Foundation, either version 3 of the License,  
+%   or (at your option) any later version.                             
+%                                                                      
+%   LyXBlogger is distributed in the hope that it will be useful,      
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of     
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      
+%   GNU General Public License for more details.                       
+%                                                                      
+%   You should have received a copy of the GNU General Public License  
+%   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. 
+%                                                                   
+%  Images in this file are freely provided by freeimages.co.uk
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_xetex false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Basic Blog Entry
+\end_layout
+
+\begin_layout Standard
+This is a basic blog entry.
+ It has two pictures.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename dir_1_w_áíéllß/subdir_ \asdfááááá/bowl.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+And
+\end_layout
+
+\begin_layout Enumerate
+it
+\end_layout
+
+\begin_layout Enumerate
+also
+\end_layout
+
+\begin_layout Enumerate
+has
+\end_layout
+
+\begin_layout Enumerate
+a
+\end_layout
+
+\begin_layout Enumerate
+few
+\end_layout
+
+\begin_layout Enumerate
+words
+\end_layout
+
+\begin_layout Section
+And a Couple Sections
+\end_layout
+
+\begin_layout Section
+Like This
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename dir_1_w_áíéllß/table.jpg
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

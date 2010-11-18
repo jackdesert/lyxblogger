@@ -1,0 +1,859 @@
+
+
+/*########################################################################################
+/#  Add the following to your WordPress stylesheet as a starting point for LyXBlogger   */
+
+/**********************************************************************
+********************    BASICS    *************************************/
+/* Put a space between paragraphs */
+.Standard {
+        padding: 1em 0 0 0;
+}
+/* Don't underline entire paragraphs, as LyXHTML will do by default */
+a:hover {
+        text-decoration: none;
+}
+
+
+/***********************************************************************
+* eLyXer Stylesheet.
+*/
+body {
+    font: 90% sans-serif;
+    background: #f9f9f9;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#globalWrapper {
+    margin: 10px 80px 10px 80px;
+    padding: 20px;
+    background: #ffffff;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: #0030c0;
+    background: none;
+}
+a:visited {
+    color: #603090;
+}
+a:active {
+    color: #ffa000;
+}
+a:hover {
+    text-decoration: none;
+}
+h1 {
+    margin-top: 1em;
+    line-height: 1.5em;
+}
+h1.Part {
+    text-align: center;
+}
+h1.Part- {
+    text-align: center;
+}
+sup {
+    font-size: 0.75em;
+    line-height: 0.5em;
+    vertical-align: text-top;
+}
+sub {
+    font-size: 0.75em;
+    line-height: 0.5em;
+    vertical-align: text-bottom;
+}
+div.Standard {
+    margin: 1em 0;
+}
+div.Unindented {
+    margin: 0;
+}
+div.Indented {
+    text-indent: 30pt;
+    margin: 0;
+}
+div.Indented * {
+    text-indent: 0pt;
+}
+p.dir {
+    float: right;
+}
+p.printindex {
+    font-size: 0.90em;
+}
+a.printindex {
+    color: black;
+}
+
+div.float {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    text-align: center;
+}
+span.float {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    text-align: center;
+}
+div.figure {
+    display: inline-block;
+    padding: 1ex;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid #c0c0c0;
+}
+div.table {
+    display: inline-block;
+    padding: 1ex;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid #c0c0c0;
+}
+div.algorithm {
+    display: inline-block;
+    text-align: left;
+    padding: 1ex;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid #c0c0c0;
+}
+div.caption {
+    text-align: center;
+    font-family: sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5ex;
+}
+
+div.multifigure {
+    padding: 1ex;
+}
+div.multitable {
+    display: inline-block;
+    padding: 1ex;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid #c0c0c0;
+}
+div.multialgorithm {
+    display: inline-block;
+    padding: 1ex;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid #c0c0c0;
+}
+table {
+    display: inline-table;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+tr.header {
+    border-bottom: thin solid #c0c0c0;
+    background: #ffffff;
+    font-weight: bold;
+}
+td {
+    padding: 1ex;
+    border: thin solid #f0f0f0;
+}
+td div.Standard {
+    margin: 0ex;
+    padding: 0ex;
+}
+div.caption div.Standard, div.table div.Standard {
+    margin: 0ex;
+    padding: 0ex;
+}
+td.numeric {
+    text-align: right;
+}
+td.empty {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.biblio {
+    font-size: 0.90em;
+}
+div.Paragraph, div.Paragraph- {
+    font-weight: bold;
+    font-size: 103%;
+}
+span.versalitas {
+    font-variant: small-caps;
+}
+span.sans {
+    font-family: sans-serif;
+}
+span.mathsf {
+    font-family: sans-serif;
+    font-style: normal;
+}
+span.red {
+    color: #c00000;
+}
+span.blue {
+    color: #0000c0;
+}
+span.green {
+    color: #00c000;
+}
+span.magenta {
+    color: #c000c0;
+}
+span.cyan {
+    color: #00c0c0;
+}
+span.yellow {
+    color: #c0c000;
+}
+span.white {
+    color: #ffffff;
+}
+.formula {
+    color: #000040;
+    text-align: center;
+    font-family: serif;
+    margin: 1.2em 0;
+}
+div.formula {
+    padding: 0.5ex;
+    margin-left: auto;
+    margin-right: auto;
+}
+span.overline {
+    text-decoration: overline;
+}
+span.bar {
+    text-decoration: overline;
+}
+.fraction {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.fraction .fraction {
+    font-size: 80%;
+    line-height: 100%;
+}
+.fullfraction {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+span.numerator {
+    display: block;
+}
+span.numerator-l {
+    display: block;
+    text-align: left;
+}
+span.numerator-r {
+    display: block;
+    text-align: right;
+}
+span.numeratorl {
+    display: block;
+    text-align: left;
+}
+span.numeratorr {
+    display: block;
+    text-align: right;
+}
+span.denominator {
+    display: block;
+    padding: 0;
+    border-top: thin solid #000040;
+}
+span.sqrt {
+    display: inline-block;
+    vertical-align: middle;
+}
+span.radical {
+    display: inline-block;
+    padding: 0;
+    font-size: 150%;
+    vertical-align: top;
+}
+span.root {
+    display: inline-block;
+    border-top: thin #000040 solid;
+    padding: 0;
+    vertical-align: middle;
+}
+span.symbol {
+    font-size: 125%;
+}
+span.bigsymbol {
+    font-size: 150%;
+}
+span.largesymbol {
+    font-size: 175%;
+}
+span.hugesymbol {
+    font-size: 200%;
+}
+span.limits {
+    display: inline-table;
+    vertical-align: middle;
+}
+sub.bigsymbol {
+    display: table-row;
+    text-align: left;
+    line-height: 150%;
+}
+sup.bigsymbol {
+    display: table-row;
+    text-align: left;
+    line-height: 150%;
+}
+span.symbolover {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    float: right;
+    right: 100%;
+    bottom: 0.5em;
+    width: 0px;
+}
+span.withsymbol {
+    display: inline-block;
+}
+span.symbolunder {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    float: right;
+    right: 80%;
+    top: 0.3em;
+    width: 0px;
+}
+span.dotted {
+    border-top: thin #000040 dotted;
+}
+span.FootMarker {
+    color: #004000;
+}
+span.Foot {
+    float: right;
+    clear: right;
+    margin: 0.2ex;
+    border: thin solid #c0c0c0;
+    background: #ffffff;
+    width: 30%;
+    padding: 0.5ex;
+    font: small normal;
+    text-align: left;
+}
+span.Marginal {
+    float: right;
+    clear: right;
+    margin: 0.2ex;
+    border: thin solid #c0c0c0;
+    background: #ffffff;
+    width: 30%;
+    padding: 0.5ex;
+    font: small normal;
+    text-align: left;
+}
+span.Note {
+    display: none;
+}
+span.code {
+    font-family: monospace;
+}
+div.Plain {
+    display: inline;
+    width: auto;
+}
+h1.title {
+    text-align: center;
+}
+h2.author {
+    text-align: center;
+}
+h2.Date {
+    text-align: center;
+}
+span.text {
+    font-style: normal;
+}
+span.textipa {
+    color: #008080;
+}
+span.Description-entry {
+    font-weight: bold;
+}
+span.List-entry {
+    display: inline-block;
+    width: 25%;
+    vertical-align: text-top;
+}
+span.List-contents {
+    display: inline-block;
+    width: 75%;
+    vertical-align: text-top;
+}
+div.Space {
+    display: none;
+}
+span.fraktur {
+    font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+    font-family: Blackboard, msbm10, serif;
+}
+span.script {
+    font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+}
+span.arraydef {
+    display: none;
+}
+span.appendix {
+    display: none;
+}
+h1.biblio {
+    font-size: 140%;
+}
+table.formula {
+    display: inline-block;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0em;
+    vertical-align: middle;
+}
+td.formula-l {
+    text-align: left;
+    padding: 0.2ex;
+    border: 0ex;
+}
+td.formula-c {
+    text-align: center;
+    padding: 0.2ex;
+    border: 0ex;
+}
+td.formula-r {
+    text-align: right;
+    padding: 0.2ex;
+    border: 0ex;
+}
+table.cases {
+    display: inline-block;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0.2em;
+    border-left: thin solid #000040;
+    vertical-align: middle;
+}
+table.cases tr td {
+    padding-left: 1ex;
+    padding-right: 1em;
+}
+table.environment {
+    display: inline-block;
+    text-align: right;
+    margin: 0;
+    vertical-align: middle;
+}
+table.environment tr td {
+    padding: 0 1em;
+}
+span.greyedout {
+    color: #808080;
+}
+div.Description, div.List, li {
+    margin: 1em 0;
+}
+li.nested {
+    list-style-type: none;
+}
+span.Info {
+    background: #f0f0f0;
+    border: thin solid #c0c0c0;
+}
+pre {
+    padding: 0em;
+    margin: 0em;
+    width: auto;
+    font-family: monospace;
+    line-height: 1.5em;
+}
+a.Label {
+    text-decoration: none;
+    color: #000000;
+}
+div.wrap-l, div.wrap-o, div.wrap-i {
+    margin: 2ex;
+    float: left;
+}
+div.wrap-r {
+    margin: 2ex;
+    float: right;
+}
+div.abstract {
+    margin: 3em;
+    text-align: center;
+}
+p.abstract-message {
+    font-weight: bold;
+}
+div.listing {
+    display: inline-block;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5ex;
+    border: thin solid #c0c0c0;
+}
+div.framed {
+    outline-style: solid;
+}
+div.frameless {
+}
+div.Framed {
+    outline-style: double;
+}
+div.Frameless {
+    outline-style: outset;
+}
+div.Doublebox {
+    outline-style: double;
+}
+div.Shadowbox {
+    outline-style: outset;
+}
+div.Shaded {
+    outline-style: inset;
+}
+div.ovalbox {
+    outline-style: grooved;
+}
+div.Ovalbox {
+    outline-style: ridged;
+}
+span.number-left {
+    float: left;
+    background: #f0f0f0;
+    width: 3em;
+    text-align: right;
+    margin-right: 1em;
+}
+span.number-right {
+    float: right;
+    background: #f0f0f0;
+    width: 3em;
+    text-align: right;
+    margin-left: 1em;
+}
+a.eqnumber {
+    display: inline-block;
+    float: right;
+    clear: right;
+    font-weight: bold;
+    color: #000040;
+}
+span.unknown {
+    color: #800000;
+}
+span.phantom {
+    color: #ffffff;
+}
+div.tocheader {
+    margin: 1em 0;
+    font-size: large;
+}
+a.toc {
+    color: black;
+}
+a.biblioentry {
+    color: black;
+}
+div.tocindent {
+    padding: 0 0 0 2em;
+}
+div.toc {
+    margin: 0.5em 0;
+    font-size: 0.95em;
+}
+div.fulltoc {
+    padding: 1em;
+}
+span.hspace {
+    display: inline-block;
+}
+span.vspace {
+    display: inline-block;
+}
+span.hfill {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 20mm;
+    background: #fff0f0;
+}
+span.binom {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 80%;
+}
+span.fullbinom {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+span.upbinom {
+    display: block;
+    padding: 0em;
+}
+span.downbinom {
+    display: block;
+    padding: 0em;
+}
+div.defskip {
+    display: block;
+    height: 1em;
+}
+div.smallskip {
+    display: block;
+    height: 0.5em;
+}
+div.medskip {
+    display: block;
+    height: 1em;
+}
+div.bigskip {
+    display: block;
+    height: 2em;
+}
+div.vfill {
+    display: block;
+    height: 30em;
+}
+span.menuitem {
+    font-size: 105%;
+}
+div.chunk {
+    width: auto;
+}
+span.chunkleft {
+    font-style: normal;
+}
+span.chunkright {
+    font-style: normal;
+}
+span.chunkdecl {
+    font-style: italic;
+    padding: 0em 2em;
+}
+span.chunkref {
+    font-style: italic;
+}
+span.normal {
+    font-style: normal;
+}
+span.overbrace {
+    border-top: 2pt solid #000000;
+}
+span.underbrace {
+    border-bottom: 2pt solid #000000;
+}
+
+/**********************************************************************/
+/*   END ELYXER STYLESEET                                             */
+
+
+
+
+
+
+
+/**********************************************************************/
+/**** BEGIN LyXHTML Stylesheed from User Guide version 1.6.x  */
+<!-- Text Class Preamble -->
+<style type="text/css">
+div.toc {
+margin: 2em 0em;
+border-style: solid;
+border-width: 2px 0px;
+padding: 1em 0em;
+}
+div.tochead { font-size: x-large; font-weight: bold; }
+div.lyxtoc-1 {
+margin: 1em 0em 0em 0em;
+font-size: x-large;
+font-weight: bold;
+}
+div.lyxtoc-2 {
+margin: 0em 0em 0em 1em;
+font-size: large;
+font-weight: normal;
+}
+div.lyxtoc-3 { margin: 0em 0em 0em 1em; font-size: medium; }
+div.lyxtoc-4 { margin: 0em 0em 0em 1em; }
+div.lyxtoc-5 { margin: 0em 0em 0em 1em; }
+div.lyxtoc-6 { margin: 0em 0em 0em 1em; }
+a.tocarrow {
+font-weight: bold;
+text-decoration: none;
+color: #909090;
+}
+a.tocarrow:visited { color: #C0C0C0; }
+</style>
+
+<!-- Premable Snippets -->
+table { border: 1px solid black; display: inline-block; }
+td { border: 1px solid black; padding: 0.5ex; }
+
+
+\newcommand*\LyXbar{\rule[0.585ex]{1.2em}{0.25pt}}
+
+div.bibtexentry { margin-left: 2em; text-indent: -2em; }
+span.bibtexlabel:before{ content: "["; }
+span.bibtexlabel:after{ content: "] "; }
+
+
+<!-- Layout-provided Styles -->
+<style type='text/css'>
+h1.title {
+font-family: sans-serif;
+font-weight: bold;
+font-size: x-large;
+}
+div.author {
+font-size: x-large;
+}
+div.standard {
+text-indent: 2em;
+margin-bottom: 2ex;
+}
+h1.chapter {
+font-family: sans-serif;
+font-weight: bold;
+font-size: x-large;
+}
+h2.section {
+font-family: sans-serif;
+font-weight: bold;
+font-size: x-large;
+}
+ol.lyxlist {
+list-style-type: none;
+}
+span.lyxlist {
+margin-right: 3em;
+}
+h3.subsection {
+font-family: sans-serif;
+font-weight: bold;
+font-size: large;
+}
+h4.subsubsection {
+font-family: sans-serif;
+font-weight: bold;
+font-size: medium;
+}
+dl.description dt { font-weight: bold; }
+h4.subsubsection {
+font-family: sans-serif;
+font-weight: bold;
+font-size: medium;
+}
+div.lyxcode {
+font-family: monospace;
+}
+div.bibliography {
+margin-left: 2em;
+text-indent: -2em;
+}
+span.bibitemlabel:before { content: "["; }
+span.bibitemlabel:after { content: "] "; }
+span.foot_label {
+vertical-align: super;
+font-size: smaller;
+font-weight: bold;
+text-decoration: underline;
+}
+div.foot {
+display: inline;
+font-size: small;
+font-weight: medium;
+font-family: serif;
+font-variant: normal;
+font-style: normal;
+}
+div.foot_inner { display: none; }
+div.foot:hover div.foot_inner {
+display: block;
+border: 1px double black;
+margin: 0em 1em;
+padding: 1em;
+}
+div.note_greyedout {
+display: inline;
+color: #A0A0A0;
+padding-left: 1ex;
+padding-right: 1ex;
+}
+span.shortcut { font-family: sans-serif; }
+span.optarg {
+font-family: serif;
+font-weight: normal;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+}
+div.float {
+border: 2px solid black;
+text-align: center;
+}
+div.float-caption {
+text-align: center;
+border: 2px solid black;
+padding: 1ex;
+margin: 1ex;
+}
+div.marginal {
+border: 2px solid black;
+padding: 1ex;
+margin: 1ex;
+background-color: #F0F0F0;
+float:right;
+font-size: small;
+font-weight: medium;
+font-family: serif;
+font-variant: normal;
+font-style: normal;
+}
+div.wrap {
+float: right;
+border: 2px solid black;
+padding: 1ex;
+margin: 1ex;
+}
+div.Frameless { font-family: sans-serif; }
+span.url {
+font-family: monospace;
+}
+div.branch {
+font-family: serif;
+font-weight: normal;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+}
+/******************************************************************/
+/*    End LyXHTML CSS *********************************************/

@@ -1,0 +1,831 @@
+#LyX 2.0.0svn created this file. For more info see http://www.lyx.org/
+\lyxformat 384
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
+%                                                                      
+%   Copyright 2010 Jack Desert                                         
+%   <jackdesert556@gmail.com>                                          
+%   <http://www.LetsEATalready.com>                                    
+%                                                                      
+%%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
+%                                                                      
+%   This file is part of LyXBlogger.                                   
+%                                                                      
+%   LyXBlogger is free software: you can redistribute it and/or modify 
+%   it under the terms of the GNU General Public License as published  
+%   by the Free Software Foundation, either version 3 of the License,  
+%   or (at your option) any later version.                             
+%                                                                      
+%   LyXBlogger is distributed in the hope that it will be useful,      
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of     
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      
+%   GNU General Public License for more details.                       
+%                                                                      
+%   You should have received a copy of the GNU General Public License  
+%   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. 
+%                                                                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_xetex false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+LyXBlogger Developer Guide
+\end_layout
+
+\begin_layout Author
+Jack Desert (jackdesert556@gmail.com)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap table
+lines 0
+placement r
+overhang 0in
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Home"
+target "index.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Download"
+target "http://download.savannah.gnu.org/releases-noredirect/lyxblogger/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Change Log"
+target "changelog.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "User Guide"
+target "userguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Development Guide"
+target "devguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Basics
+\end_layout
+
+\begin_layout Standard
+This document should help you get started if you want to understand how
+ LyXBlogger works, and maybe extending its functionality.
+ The package (including this guide and all accompanying materials) is licensed
+ under the 
+\begin_inset CommandInset href
+LatexCommand href
+name "GPL version 3"
+target "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+
+\end_inset
+
+ or, at your option, any later version.
+ See the 
+\family typewriter
+LICENSE
+\family default
+ file for details.
+ Also visit the 
+\begin_inset CommandInset href
+LatexCommand href
+name "main page"
+target "index.html"
+
+\end_inset
+
+ to find out about the latest developments.
+\end_layout
+
+\begin_layout Standard
+In this first section we will outline how LyXBlogger performs the basic
+ tasks.
+ Next section will be devoted to more arcane matters.
+ The third section deals with future planned extensions, and the fourth
+ one includes things that will probably 
+\emph on
+not
+\emph default
+ be implemented.
+ Finally there is a FAQ that contains answers to questions asked privately.
+\end_layout
+
+\begin_layout Subsection
+Getting LyXBlogger
+\end_layout
+
+\begin_layout Standard
+If you are interested in LyXBlogger from a developer perspective the first
+ thing to do is fetch the code.
+ It is included in the standard distribution, so just navigate to the 
+\family typewriter
+src/
+\family default
+ folder and take a look at the 
+\family typewriter
+.py
+\family default
+ Python code files.
+ 
+\end_layout
+
+\begin_layout Section
+Advanced Features
+\end_layout
+
+\begin_layout Subsection
+Unit Testing
+\end_layout
+
+\begin_layout Standard
+Each file in src/LyxBlog/ has a file of unit tests to run.
+ 
+\end_layout
+
+\begin_layout Subsection
+Running seed.py 
+\end_layout
+
+\begin_layout Standard
+If you want to debug LyXBlogger then it is better to run it from the source
+ code folder, instead of the compiled version.
+ For this you need to make just a small change, instead of 
+\family typewriter
+INSTALL/lyxblogger.py 
+\family default
+run 
+\family typewriter
+src/seed.py
+\family default
+.
+ On GNU/Linux or Mac OS X this file can be run as an executable like so:
+\end_layout
+
+\begin_layout LyX-Code
+./seed.py [input_file] --run-here
+\end_layout
+
+\begin_layout Standard
+The --run-here flag prevents src/term.py from calling the lyxblogger module
+ in an xterm window.
+ This means that everything that's executed will be done on local files,
+ without the use of the lyxblogger module that may be installed on your
+ system.
+ This is much easier to develop on for most things.
+\end_layout
+
+\begin_layout Subsection
+Interactive Testing
+\end_layout
+
+\begin_layout Standard
+There is a test file in src/ called test_seed.py.
+ This file calls all the unit tests, and then begins an interative test
+ where seed.py will be invoked to talk to the server with automated responses
+ given.
+ Make sure you are connected to the internet when you run this test, or
+ the test will appear to just run off the screen.
+ If interactive_test.py is not working, first get seed.py to run with the
+ '--run-here' option.
+ Once seed.py is running with '--run-here', then go back to debugging interactive
+_test.py.
+ 
+\end_layout
+
+\begin_layout Standard
+If the test you are working with is not finishing, comment out the other
+ tests in interactivee_test.py so the test suite can finish and show you
+ the results.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+print vs pr3
+\end_layout
+
+\begin_layout Standard
+pr3 is used in LyXBlogger to enable messages to be passed back and forth
+ between the interactive LyXBlogger and the interactive tester.
+ Anything that must be passed to the interactive tester must use pr3.
+ Anything else can use a regular print() statement.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Unicode Strings
+\end_layout
+
+\begin_layout Standard
+print() and pr3() don't always play nicely with strings.
+ This happens most often when using the interactive tester.
+ Hence, some lines that are particularly problematic have been wrapped in
+ a try: clause looking for a UnicodeEncodeError exception.
+\end_layout
+
+\begin_layout Subsection
+Distribution 
+\end_layout
+
+\begin_layout Standard
+You will notice that in the 
+\family typewriter
+src/LyXBlog
+\family default
+ folder there are several Python files, while in the INSTALL directory there
+ is just a big one.
+ The reason is that before distributing the source code is coalesced and
+ placed on the main directory, so that users can run it without worrying
+ about libraries, directories and the such.
+ (They need of course to have Python 2.4, 2.5, or 2.6 installed.) And the weapon
+ is a little Python script called 
+\family typewriter
+coalesce.py
+\family default
+ that does the dirty job of parsing dependencies and inserting them into
+ the main file.
+ There is also a 
+\family typewriter
+make
+\family default
+ Bash script that takes care of permissions and generates the documentation.
+ Just type
+\end_layout
+
+\begin_layout Quotation
+
+\family typewriter
+\color blue
+$
+\color inherit
+ ./distribute.py
+\end_layout
+
+\begin_layout Standard
+at the prompt.
+ It is a primitive way perhaps to generate the 
+\begin_inset Quotes eld
+\end_inset
+
+binary
+\begin_inset Quotes erd
+\end_inset
+
+ (ok, not really a binary but a distributable Python file), but it works
+ great.
+ It also runs all of the included tests to check that no functionality has
+ been lost from one release to the next -- although some issues in a feature
+ can slip undetected if there is no test for them.
+\end_layout
+
+\begin_layout Standard
+./distribute.py also invokes test_seed.py to validate that all the tests are
+ passing before creating the binary.
+ 
+\end_layout
+
+\begin_layout Standard
+At the moment there is no way to do this packaging on non-Unix operating
+ systems with a single script, e.g.
+ a Windows 
+\family typewriter
+.bat
+\family default
+ script.
+ However the steps themselves are trivial.
+\end_layout
+
+\begin_layout Standard
+If you are willing to send a patch to the LyXBlogger mailing list then you
+ should patch against the proper sources in 
+\family typewriter
+src/
+\family default
+ and submit that to the 
+\begin_inset CommandInset href
+LatexCommand href
+name "mailing list"
+target "lyxblogger-users@nongnu.org"
+type "mailto:"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+License and Contributions
+\end_layout
+
+\begin_layout Standard
+LyXBlogger is published under the GPL, version 3 or later 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "stallman-gplv3"
+
+\end_inset
+
+.
+ This basically means that you can modify the code and distribute the result
+ as desired, as long as you publish your modifications under the same license.
+ But consult a lawyer if you want an authoritative opinion.
+\end_layout
+
+\begin_layout Standard
+All contributions will be published under this same license, so if you send
+ them this way you implicitly give your consent.
+ An explicit license grant would be even better and may be required for
+ larger contributions.
+\end_layout
+
+\begin_layout Section
+Important Tidbits
+\end_layout
+
+\begin_layout Subsection
+Calling Python Modules as Scripts
+\end_layout
+
+\begin_layout Standard
+See 
+\begin_inset CommandInset href
+LatexCommand href
+name "this link"
+target "http://www.python.org/dev/peps/pep-0338/"
+
+\end_inset
+
+ on calling python modules as scripts with 
+\begin_inset Quotes eld
+\end_inset
+
+python -m <module>
+\begin_inset Quotes erd
+\end_inset
+
+ syntax.
+\end_layout
+
+\begin_layout Subsection
+Testing a Release
+\end_layout
+
+\begin_layout Standard
+Considerable unit testing and some interactive testing has been added to
+ the code.
+ But to ensure quality release code, the following tests are suggested before
+ publishing a new release.
+ Run then on GNU/Linux and on Windows:
+\end_layout
+
+\begin_layout Itemize
+Upload a document with at least one picture and a title using eLyXer using
+ AUTO_LOGIN
+\end_layout
+
+\begin_layout Itemize
+Upload a document with at least one picture and a title using LyXHTML where
+ you type in your url explicitly.
+ 
+\end_layout
+
+\begin_layout Itemize
+Upload a document using eLyXer that has no title.
+ Make sure it asks for a title and uses it.
+\end_layout
+
+\begin_layout Itemize
+Upload a document using LyXHTML that has no title.
+ Make sure it asks for a title and uses it.
+\end_layout
+
+\begin_layout Section
+Future Extensions
+\end_layout
+
+\begin_layout Standard
+The author has plans for the following extensions.
+\end_layout
+
+\begin_layout Subsection
+Republish
+\end_layout
+
+\begin_layout Standard
+The ability to correct changes in the original LyX file, publish the post,
+ and have the new entry overwrite a previous entry instead of being posted
+ as a new entry.
+\end_layout
+
+\begin_layout Subsection
+Download and Edit Previous Entries
+\end_layout
+
+\begin_layout Standard
+The author would love to have a bidirectional method in place for editing
+ and republishing blog entries.
+ The biggest question seems to be, 
+\begin_inset Quotes eld
+\end_inset
+
+What converter will provide xhtml -> LyX conversion the best?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Display UTF-8 Titles
+\end_layout
+
+\begin_layout Standard
+Correctly display UTF-8 titles on Windows machines.
+ Works fine on GNU/Linux, but other characters show up on Windows.
+ Either way, the entry is posted perfectly, it just looks funny in the LyXBlogge
+r console window.
+\end_layout
+
+\begin_layout Subsection
+Select Multiple Categories
+\end_layout
+
+\begin_layout Standard
+The ability to select two or more categories for a single blog entry.
+ 
+\end_layout
+
+\begin_layout Subsection
+GUI
+\end_layout
+
+\begin_layout Standard
+A graphical user interface where the user can select previously posted blog
+ entries, edit them, push the changes to the server.
+\end_layout
+
+\begin_layout Subsection
+Page Creation
+\end_layout
+
+\begin_layout Standard
+The ability to create a WordPress page.
+\end_layout
+
+\begin_layout Section
+Roadmap
+\end_layout
+
+\begin_layout Standard
+Who needs a map? A map would be nice, actually, but there isn't one.
+ Feel free to suggest one.
+\end_layout
+
+\begin_layout Section
+Discarded Bits
+\end_layout
+
+\begin_layout Standard
+Not everything that has been planned or can be done with LyXBlogger is planned;
+ some extensions have been discarded.
+ However, this means basically that the author is too ignorant to know how
+ to do them right; help (and patches!) towards a sane implementation would
+ be welcome if they fit with the design.
+\end_layout
+
+\begin_layout Section
+FAQ
+\end_layout
+
+\begin_layout Description
+Q: I don't like how LyXBlogger outputs my document, what can I do?
+\end_layout
+
+\begin_layout Description
+A: First make sure that you are using the proper CSS file, i.e.
+ copy the existing 
+\family typewriter
+docs/lyx.css
+\family default
+ file to your blog's server.
+ Next try to customize the CSS file to your liking; it is a flexible approach
+ that requires no code changes.
+ Also consider trying both supported converters, as each one puts out somewhat
+ different-looking output.
+ If all else fails, try changing the LyXBlogger code and submitting the
+ patch back.
+\end_layout
+
+\begin_layout Description
+Q: Why does your Python code suck so much? You don't make proper use of
+ most features!
+\end_layout
+
+\begin_layout Description
+A: Because I'm mostly a novice with little Python culture.
+ If you want to help it suck less, please send mail and enlighten me.
+\end_layout
+
+\begin_layout Description
+Q: I found a bug, what should I do?
+\end_layout
+
+\begin_layout Description
+A: Just report it directly to the 
+\begin_inset CommandInset href
+LatexCommand href
+name "main author"
+target "mailto:jackdesert556@gmail.com"
+type "mailto:"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Q: Where can I get the latest documentation and information about LyXBlogger?
+\end_layout
+
+\begin_layout Description
+A: At 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.nongnu.org/lyxblogger"
+target "http://www.nongnu.org/lyxblogger"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "savannah-elyxer"
+
+\end_inset
+
+Free Software Foundation, Inc.: LyXBlogger summary.
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://savannah.nongnu.org/projects/lyxblogger/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "stallman-gplv3"
+
+\end_inset
+
+R S Stallman 
+\emph on
+et al
+\emph default
+: 
+\begin_inset Quotes eld
+\end_inset
+
+GNU GENERAL PUBLIC LICENSE
+\begin_inset Quotes erd
+\end_inset
+
+ version 3, 20070629.
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.gnu.org/copyleft/gpl.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "git-download"
+
+\end_inset
+
+S Chacon: 
+\begin_inset Quotes eld
+\end_inset
+
+Git -- Download
+\begin_inset Quotes erd
+\end_inset
+
+, accessed November 2009.
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://git-scm.com/download
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring References
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "python-download"
+
+\end_inset
+
+Python community: 
+\begin_inset Quotes eld
+\end_inset
+
+Download Python
+\begin_inset Quotes erd
+\end_inset
+
+, accessed November 2009.
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.python.org/download/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

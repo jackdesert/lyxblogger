@@ -1,0 +1,1425 @@
+#LyX 2.0.0beta1 created this file. For more info see http://www.lyx.org/
+\lyxformat 407
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
+%                                                                      
+%   Copyright 2010 Jack Desert                                         
+%   <jackdesert556@gmail.com>                                          
+%   <http://www.LetsEATalready.com>                                    
+%                                                                      
+%%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
+%                                                                      
+%   This file is part of LyXBlogger.                                   
+%                                                                      
+%   LyXBlogger is free software: you can redistribute it and/or modify 
+%   it under the terms of the GNU General Public License as published  
+%   by the Free Software Foundation, either version 3 of the License,  
+%   or (at your option) any later version.                             
+%                                                                      
+%   LyXBlogger is distributed in the hope that it will be useful,      
+%   but WITHOUT ANY WARRANTY; without even the implied warranty of     
+%   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      
+%   GNU General Public License for more details.                       
+%                                                                      
+%   You should have received a copy of the GNU General Public License  
+%   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. 
+%                                                                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_xetex false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+LyXBlogger User Guide
+\end_layout
+
+\begin_layout Author
+Jack Desert (jackdesert556@gmail.com)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap table
+lines 0
+placement r
+overhang 0in
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Home"
+target "index.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Download"
+target "http://download.savannah.gnu.org/releases-noredirect/lyxblogger/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Change Log"
+target "changelog.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "User Guide"
+target "userguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Development Guide"
+target "devguide.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Basics
+\end_layout
+
+\begin_layout Standard
+LyXBlogger (pronounced 
+\emph on
+licks blogger
+\emph default
+) is a blog publishing tool.
+ It doesn't walk your dog, insult your mother, or assert world peace.
+ But it does make composing and uploading blog entries simple and straightforwar
+d.
+ 
+\end_layout
+
+\begin_layout Standard
+LyXBlogger (including this guide and all accompanying materials) is licensed
+ under the 
+\begin_inset CommandInset href
+LatexCommand href
+name "GPL version 3"
+target "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+
+\end_inset
+
+ or, at your option, any later version.
+ See the 
+\family typewriter
+LICENSE
+\family default
+ file for details.
+\end_layout
+
+\begin_layout Standard
+Please visit the 
+\begin_inset CommandInset href
+LatexCommand href
+name "main page"
+target "index.html"
+
+\end_inset
+
+ to find out about the latest developments.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:System-Requirements"
+
+\end_inset
+
+System Requirements
+\end_layout
+
+\begin_layout Subsubsection
+Client
+\end_layout
+
+\begin_layout Standard
+The computer that LyXBlogger is installed on will be referred to as the
+ 
+\emph on
+client 
+\emph default
+machine.
+ This is likely the same computer that you use to compose your LyX documents
+ and to convert them to xhtml.
+\end_layout
+
+\begin_layout Standard
+Required:
+\end_layout
+
+\begin_layout Itemize
+Python version between 2.4 and 2.6.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+(Python 3.1 will be supported once the xmlrpclib module is ported to it.)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+LyX
+\end_layout
+
+\begin_layout Itemize
+A LyX -> xhtml converter (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:xhtml-Converters"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+GNU/Linux and Mac OSX also require:
+\end_layout
+
+\begin_layout Itemize
+xterm (this came preinstalled on the systems I tested with.)
+\end_layout
+
+\begin_layout Subsubsection
+Server 
+\end_layout
+
+\begin_layout Standard
+The computer that WordPress is installed on will be referred to as the 
+\emph on
+server
+\emph default
+, since WordPress is often installed on a remote server.
+ 
+\end_layout
+
+\begin_layout Standard
+Required:
+\end_layout
+
+\begin_layout Itemize
+WordPress
+\end_layout
+
+\begin_layout Standard
+WordPress can be installed on most web servers that support PhP and MySQL.
+ Many web hosting companies even offer 
+\begin_inset Quotes eld
+\end_inset
+
+one click install
+\begin_inset Quotes erd
+\end_inset
+
+ of WordPress.
+ For more information on installing WordPress on your site, see 
+\begin_inset CommandInset href
+LatexCommand href
+name "wordpress.org"
+target "http://codex.wordpress.org/Hosting_WordPress"
+
+\end_inset
+
+.
+ Also check the documentation for your particular web server.
+\end_layout
+
+\begin_layout Standard
+If you want to blog without the hassle of setting up the WordPress software
+ yourself, you can sign up for a 
+\begin_inset CommandInset href
+LatexCommand href
+name "wordpress.com"
+target "http://www.wordpress.com"
+
+\end_inset
+
+ hosted blog.
+ If you go this route, I recommend paying the small fee (about $10/year)
+ for the ability to modify your own CSS file.
+ That way you can customize the look and feel of your entries.
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:xhtml-Converters"
+
+\end_inset
+
+xhtml Converters
+\end_layout
+
+\begin_layout Standard
+An xhtml converter is required as an intermediate step between LyX and your
+ WordPress blog.
+ You may use eLyXer, which comes bundled with LyXBlogger, or you may use
+ LyX 2.0's native LyXHTML converter.
+ 
+\end_layout
+
+\begin_layout Subsection
+Installation
+\end_layout
+
+\begin_layout Standard
+First you will need to fetch the official distribution file from the 
+\begin_inset CommandInset href
+LatexCommand href
+name "download area"
+target "https://savannah.nongnu.org/files/?group=lyxblogger"
+
+\end_inset
+
+.
+ Start by uncompressing the distributed file to a suitable directory.
+ Just write at the command prompt
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+On Windows operating systems, right click on 
+\family typewriter
+\emph on
+LyXBlogger_[version].zip
+\family default
+\emph default
+ and click 
+\emph on
+Extract
+\emph default
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+$
+\color inherit
+ tar -xzf
+\emph on
+ LyXBlogger_[version]
+\emph default
+.tar.gz
+\end_layout
+
+\begin_layout Standard
+A directory called 
+\family typewriter
+LyXBlogger_[version]
+\family default
+ should appear.
+ 
+\end_layout
+
+\begin_layout LyX-Code
+$ cd LyXBlogger_x.xx/ 
+\end_layout
+
+\begin_layout LyX-Code
+$ cd INSTALL/ 
+\end_layout
+
+\begin_layout LyX-Code
+$ python setup.py install
+\end_layout
+
+\begin_layout Standard
+This default installation includes wordpresslib and eLyXer.
+ To install without affecting your current eLyXer installation, you may
+ use the alternate installer, 
+\end_layout
+
+\begin_layout LyX-Code
+$ python setup-no-elyxer.py install
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Command-Line-Usage"
+
+\end_inset
+
+Command-Line Usage
+\end_layout
+
+\begin_layout Standard
+LyXBlogger is generally used from the export menu of LyX.
+ (To set up your export menu, see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:LyX-Integration"
+
+\end_inset
+
+.) However, at its roots LyXBlogger is perfectly happy being called from
+ the command line.
+ To invoke LyXBlogger from the command line, first generate xhtml by previewing
+ LyXHTML from LyX 2.0, or by either previewing or manually invoking eLyXer.
+ Then change to the directory where the xhtml file resides.
+ The location is shown in your browser window when you preview.
+ Invoke LyXBlogger as 
+\end_layout
+
+\begin_layout LyX-Code
+$ python -m lyxblogger <input_file> 
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Test-Drive"
+
+\end_inset
+
+Test Drive
+\end_layout
+
+\begin_layout Standard
+LyXBlogger comes out of the box ready to upload to a test site (blogtest.letseata
+lready.com) where you can test its posting capability.
+ LyXBlogger will ask you whether to post to the test site or not.
+ Once you can post to the test site, just run LyXBlogger again, this time
+ telling it to use a different site instead.
+ It will prompt you for your domain name, user name, and password.
+\end_layout
+
+\begin_layout Subsection
+Profiles
+\end_layout
+
+\begin_layout Standard
+New in version 0.38 is the ability to save several profiles.
+ LyXBlogger comes out of the box with a profile called test@blogtest.letseatalrea
+dy.com.
+ Anyone may post to this blog.
+ It's for practicing.
+ Then once you get the hang of how LyXBlogger works, add your own profile
+ to the list and post to it.
+\end_layout
+
+\begin_layout Subsection
+Password Prompt
+\end_layout
+
+\begin_layout Standard
+The most secure method is to enter an empty password.
+ This method does not save your password--you will be prompted to type it
+ in each time you make a post.
+ 
+\end_layout
+
+\begin_layout Subsection
+Image Uploads
+\end_layout
+
+\begin_layout Standard
+HTML pages do not contain images, as PDF documents; rather they have pointers
+ to image locations on disk.
+ (Luckily LyX documents are the same in this respect.) LyXBlogger will find
+ all the image tags in your xhtml document and upload them one by one to
+ your blog site.
+ Thus far JPG images have been tested.
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:LyX-Integration"
+
+\end_inset
+
+LyX Integration
+\end_layout
+
+\begin_layout Standard
+You may choose to use LyXBlogger solely from the command line.
+ But it is often more convenient to set up LyXBlogger as a converter inside
+ LyX so that you can just click a couple buttons when you are ready to upload
+ your content.
+ Then LyX automatically generates the xhtml for you using your selected
+ xhtml converter, copies the xhtml file and any associated image files to
+ a temporary directory, and uses those files when invoking LyXBlogger.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+LyXBlogger with LyX 1.6.x 
+\end_layout
+
+\begin_layout Standard
+If you used the standard installation of LyXBlogger, eLyXer is already installed
+ on your system as a Python module.
+ To set up LyX to use the eLyXer xhtml format when using LyXBlogger, use
+ these standard options in your converter line: 
+\end_layout
+
+\begin_layout LyX-Code
+Converter: python -m elyxer --nofooter --directory $$r $$i $$o
+\end_layout
+
+\begin_layout Standard
+For more information about eLyXer, see http://www.nongnu.org/elyxer/.
+ Next you need to find out what your eLyXer output format is called in LyX.
+ By default LyX calls it simply html.
+ So as long as you haven't changed it, that's what it will still be called.
+ Now go to 
+\emph on
+Tools-> Preferences-> File Handling-> File Formats
+\emph default
+.
+ Create a new file format.
+ Give it a descriptive name like 
+\emph on
+LyXBlogger (eLyXer)
+\end_layout
+
+\begin_layout Standard
+Make sure you check Document Format.
+ 
+\end_layout
+
+\begin_layout LyX-Code
+Short name: blog 
+\end_layout
+
+\begin_layout LyX-Code
+Extension: blog 
+\end_layout
+
+\begin_layout Standard
+Then click on Converters and define a new converter as follows: (This assumes
+ that the format produced by eLyXer is still set to the default of "html")
+ 
+\end_layout
+
+\begin_layout LyX-Code
+From_Format: HTML 
+\end_layout
+
+\begin_layout LyX-Code
+To_Format: LyXBlogger (eLyXer)
+\end_layout
+
+\begin_layout LyX-Code
+Converter: python -m lyxblogger $$i
+\end_layout
+
+\begin_layout Standard
+Now you can invoke this converter from within LyX by clicking 
+\emph on
+File-> Export-> LyXBlogger (eLyXer)
+\end_layout
+
+\begin_layout Subsubsection
+LyXBlogger with LyX 2.0.x 
+\end_layout
+
+\begin_layout Standard
+LyX 2.0 comes with LyXHTML support already built in.
+ Once you have installed LyXBlogger, open LyX 2.0 and click 
+\emph on
+Tools -> Reconfigure
+\emph default
+.
+ Then restart LyX.
+ LyX should have detected that LyXBlogger is installed and automatically
+ set up the file format and converter for you.
+ Click File -> Export-> LyXBlogger.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Using eLyXer with LyXBlogger and LyX 2.0
+\end_layout
+
+\begin_layout Standard
+In LyX 2.0, LyXBlogger comes preconfigured to use the internal LyXHTML format.
+ The other format supported is eLyXer xhtml format.
+ If you used the standard installation of LyXBlogger, eLyXer is already
+ installed on your system as a Python module.
+ To use eLyXer instead of LyXHTML:
+\end_layout
+
+\begin_layout Enumerate
+Open LyX 2.0 and go to 
+\emph on
+Tools-> Preferences-> External Formats -> Converters.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout Enumerate
+Select the converter named 
+\emph on
+LyXHTML to LyXBlogger
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Grab the 
+\emph on
+From Format
+\emph default
+ drop-down menu where 
+\emph on
+LyXHTML
+\emph default
+ is showing, and select 
+\emph on
+HTML
+\emph default
+ instead.
+ (This assumes that your eLyXer format is still called HTML in LyX, which
+ it is by default.) 
+\end_layout
+
+\begin_layout Enumerate
+Click 
+\emph on
+Add
+\emph default
+ and then 
+\emph on
+Apply
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Highlight the original 
+\emph on
+LyXHTML to LyXBlogger
+\emph default
+ converter again.
+\end_layout
+
+\begin_layout Enumerate
+Remove it by clicking 
+\emph on
+Remove
+\emph default
+, and then 
+\emph on
+Save
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Click 
+\emph on
+Tools -> Reconfigure
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Restart LyX.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Run LyXBlogger again by clicking 
+\emph on
+File -> Export -> LyXBlog
+\emph default
+ger.
+ When LyXBlogger opens it will tell you it is using the eLyXer format.
+\end_layout
+
+\begin_layout Section
+Interface
+\end_layout
+
+\begin_layout Subsection
+LyXBlogger
+\end_layout
+
+\begin_layout Standard
+This is the welcome screen.
+\end_layout
+
+\begin_layout Subsection
+Format
+\end_layout
+
+\begin_layout Standard
+This explains which format was detected, and tells you what the other options
+ are, so no format is left behind.
+\end_layout
+
+\begin_layout Subsection
+Title
+\end_layout
+
+\begin_layout Standard
+If you tag a line in your document as the title, LyXBlogger uses that as
+ your posting title.
+ If no title was detected, LyXBlogger will ask you to provide one.
+\end_layout
+
+\begin_layout Subsection
+Cut Flag
+\end_layout
+
+\begin_layout Standard
+Cut flag is a feature which allows you to put things end of your LyX document
+ that will not be included in your post.
+ That way, you don't have to delete all your thoughts and musings from the
+ document -- you can keep them in your working copy without publishing them.
+ If a cut flag is found, it will tell you so.
+ If you thought you defind a cut flag, and it says it's not found-- double
+ check how you defined it to make sure your extra notes are not included
+ in your post.
+ The test site is good for trying this out, too, since if you make a mistake
+ there, it's not so obvious to the world.
+ If you don't get the cut flag right the first time, you can always re-post
+ it later when you figure it out.
+ 
+\end_layout
+
+\begin_layout Standard
+The default cut flag is defined in the USER DEFINED VARIABLES section of
+ the code.
+ :
+\end_layout
+
+\begin_layout LyX-Code
+CUT_FLAG = '#! CUT MATERIAL'
+\end_layout
+
+\begin_layout Standard
+It's what's inside the single quotations that counts.
+ So with the default cut flag, the next paragraph will be found as the cut
+ flag.
+\end_layout
+
+\begin_layout Standard
+#! CUT MATERIAL
+\end_layout
+
+\begin_layout Standard
+See how the single quotes are gone? Note the single space between '!' and
+ 'C' and between 'T' and 'M'? See how the cut flag is at the beginning of
+ a paragraph? That will be picked up as a valid cut flag, and everything
+ I write down here below it will not be posted.
+ I can tell all the funny jokes I want down here and no one will ever read
+ them.
+ 
+\end_layout
+
+\begin_layout Standard
+If you want to change what is recognized as a cut flag, just edit lyxblogger.py
+ and run
+\end_layout
+
+\begin_layout LyX-Code
+python setup.py install
+\end_layout
+
+\begin_layout Standard
+again from the INSTALL directory.
+ On GNU/Linux this must be run as a super user.
+\end_layout
+
+\begin_layout Subsection
+Domain
+\end_layout
+
+\begin_layout Standard
+This asks you where you want to post to.
+ The default is to the test site.
+ If you type 'N', you will be asked where you want to post to.
+ If you want to change what site your LyXBlogger posts to by default, just
+ edit lyxblogger.py and run
+\end_layout
+
+\begin_layout LyX-Code
+python setup.py install
+\end_layout
+
+\begin_layout Standard
+again from the INSTALL directory.
+ On GNU/Linux this must be run as a super user.
+ 
+\end_layout
+
+\begin_layout Subsection
+New or Existing
+\end_layout
+
+\begin_layout Standard
+New means you've never posted this document before.
+ Existing means you already posted this document, but now you've made a
+ few changes to in and you want to replace the version that's currently
+ on the server with your latest changes.
+ If you type 'E' for Existing, you are provided with a short list of up
+ to nine recent posts to choose from.
+ If you are updating an existing post from further back than that, use the
+ 'A' option to bring in all your previous posts.
+ This can take some time, depending on your internet connection.
+ On fairly fast connection, with about 200 posts on the server, it takes
+ my system about 30 seconds to bring these in.
+ 
+\end_layout
+
+\begin_layout Subsection
+Category
+\end_layout
+
+\begin_layout Standard
+The categories brought in are ones already set up in your blog.
+ LyXBlogger is expecting a numerical input.
+ If you type out the whole name of the title, if will ask to type it in
+ again.
+ To add additional categories to the list, log in to your wordpress site
+ using your web browser and add them there.
+ Then LyXBlogger can pick them up.
+ 
+\end_layout
+
+\begin_layout Subsection
+Images
+\end_layout
+
+\begin_layout Standard
+Before the post is published, each image in your LyX document is uploaded
+ to the wordpres server.
+ This may come as a surprise, but the bigger the image (in MegaBytes), the
+ longer it takes to upload the image.
+ The connectivity speed of your server plays a role here, as well.
+ If it's taking a long time, try posting to the test site at blogtest.letseatalre
+ady.com to compare upload speed.
+ 
+\end_layout
+
+\begin_layout Subsection
+Words
+\end_layout
+
+\begin_layout Standard
+Once any images are uploaded, the xhtml formatted text will be uploaded
+\end_layout
+
+\begin_layout Subsection
+Success
+\end_layout
+
+\begin_layout Standard
+This means you're done.
+ Note where it said your post was published to.
+ Go to that address, and you'll find your post.
+ 
+\end_layout
+
+\begin_layout Section
+Advanced Use
+\end_layout
+
+\begin_layout Standard
+There are some advanced uses for eLyXer if you want to extract the most
+ of it.
+\end_layout
+
+\begin_layout Subsection
+Delay
+\end_layout
+
+\begin_layout Standard
+the DELAY parameter in USER_DEFINED_VARIABLES just puts a small pause in
+ after the Copyright information displays.
+ This gives the user a chance to read it.
+ If you've already read it once, you can change it to 
+\end_layout
+
+\begin_layout LyX-Code
+DELAY = 0
+\end_layout
+
+\begin_layout Subsection
+Capital or Lowercase
+\end_layout
+
+\begin_layout Standard
+Anytime LyXBlogger asks for a response, such as 'Y' for Yes, either an uppercase
+ or lowercase response will do.
+\end_layout
+
+\begin_layout Subsection
+What do the Parentheses Mean? (Y) N
+\end_layout
+
+\begin_layout Standard
+This format means the one in parentheses will be selected if you press ENTER.
+\end_layout
+
+\begin_layout Subsection
+Command Line Options
+\end_layout
+
+\begin_layout Standard
+Running in Same Window
+\end_layout
+
+\begin_layout Standard
+On GNU/Linux and Mac OS X, you can also run LyXBlogger without spawning
+ a separate xterm window.
+ 
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+$
+\color inherit
+ python -m lyxblogger [source file] --run-here
+\end_layout
+
+\begin_layout Subsection
+Unsupported eLyXer options
+\end_layout
+
+\begin_layout Standard
+eLyXer has an option called 
+\emph on
+--html
+\emph default
+.
+ It causes eLyXer to output html instead of xhtml.
+ Basically this means that it will not include closing tags.
+ LyXBlogger is specifically looking for opening and closing tags in order
+ to locate the title of your document.
+ Therefore, the --html option is not supported.
+\end_layout
+
+\begin_layout Subsection
+CSS
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:CSS"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The look of your blog entries when you publish from LyXBlogger is entirely
+ dependent on your CSS style file.
+ If you are using eLyXer, a good starting place is to copy the eLyXer CSS
+ file from http://www.nongnu.org/elyxer/lyx.css.
+ It comes with sane defaults for getting your site going.
+ Then you can tweak it as you go along to get a customized look.
+\end_layout
+
+\begin_layout Standard
+If you are using LyXHTML format, you can build your own CSS style by first
+ copying the embedded CSS styles.
+ Just preview the LyXHTML, then from your browser click View-> Source Code.
+ Copy all the CSS info to your own CSS file, and then edit to your liking.
+ Since LyXHTML automatically wraps all paragraphs in an <a> tag, I recommend
+ changing it so that each paragraph doesn't underline itself when you mouseover
+ it.
+ This can be as simple as:
+\end_layout
+
+\begin_layout LyX-Code
+a:hover{
+\end_layout
+
+\begin_layout LyX-Code
+    text-decoration: none;
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Subsection
+Title
+\end_layout
+
+\begin_layout Standard
+If a title is found in your LyX document, it will be used as your blog entry's
+ title.
+ If one is not found, you will be prompted to enter one.
+ By default eLyXer adds a title for you if you didn't put one in.
+ It is called 
+\begin_inset Quotes eld
+\end_inset
+
+Converted Document
+\begin_inset Quotes erd
+\end_inset
+
+.
+ This auto-generated title will be ignored, and you will be prompted for
+ a proper title.
+\end_layout
+
+\begin_layout Standard
+hat, but a planned extension will.
+\end_layout
+
+\begin_layout Section
+Work in Progress
+\end_layout
+
+\begin_layout Standard
+Work on LyXBlogger began in early 2010, has been gaining features as the
+ months roll by.
+ It's still a work in progress, whose future depends largely on the tastes
+ of those that use it.
+ If you have suggestions for improving LyXBlogger, make them!
+\end_layout
+
+\begin_layout Subsection
+Known Issues
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+LyXBlogger 0.38_BETA_1 is crashing mysteriously when using the LyXHTML format
+ in LyX 2.0.
+ 
+\end_layout
+
+\begin_layout Subsection
+Contact Information
+\end_layout
+
+\begin_layout Standard
+If your problem does not appear in the above list, please let the author
+ know; you can find him at 
+\begin_inset CommandInset href
+LatexCommand href
+name "JackDesert556@gmail.com"
+target "mailto:jackdesert556@gmail.com"
+type "mailto:"
+
+\end_inset
+
+.
+ By doing so you can help the author improve LyXBlogger for future users.
+ You can send your sample documents with a description of the errors encountered.
+ Any documents sent will be treated with the utmost confidentiality.
+\end_layout
+
+\begin_layout Section
+FAQ
+\end_layout
+
+\begin_layout Description
+Q: What versions of LyX, Python, and operating systems are supported?
+\end_layout
+
+\begin_layout Description
+A: It has been tested with LyX versions 1.6.4, 1.6.5, and 2.0.0.
+ It has been tested with eLyXer version 0.41 and 0.42.
+ It has been tested with Python version 2.4 and 2.6.
+ It has been tested on Ubuntu 9.10, Mac OS X and Windows Vista 32-bit.
+\end_layout
+
+\begin_layout Description
+Q: There are indeed 
+\emph on
+a ton
+\emph default
+ of blogging clients over the web.
+ Why add another one?
+\end_layout
+
+\begin_layout Description
+A: Because none of them allow composition from LyX.
+ 
+\end_layout
+
+\begin_layout Description
+Q: I don't like how LyXBlogger outputs my document, what can I do?
+\end_layout
+
+\begin_layout Description
+A: First make sure that you are using an appropriate CSS file.
+ i.e.
+ copy the existing 
+\family typewriter
+docs/lyx.css
+\family default
+ file to your blog's server.
+ Next try to customize the CSS file to your liking; it is a flexible approach
+ that requires no code changes.
+ Also consider trying both supported converters, as each one puts out somewhat
+ different-looking output.
+ 
+\end_layout
+
+\begin_layout Description
+Q: Why are only LyXHTML and eLyXer formats supported?
+\end_layout
+
+\begin_layout Description
+A: Other formats were tested in the early development stages of LyXBlogger.
+ Namely 
+\emph on
+HeVea
+\emph default
+, 
+\emph on
+TtH
+\emph default
+, and 
+\emph on
+latex2html
+\emph default
+.
+ Basically, it was simplest to find one or two formats that worked well
+ and only support them.
+ Perhaps future versions will support additional formats if users ask for
+ it enough.
+ Here is a rundown of features I liked and didn't like about the formats
+ I tried:
+\end_layout
+
+\begin_layout Description
+Supported: 
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+LyXHTML: Good support for footnotes.
+ Built in to future versions of LyX.
+ Integration is simple.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+eLyXer: Good support for footnotes.
+ Very easy to get a working CSS file together which takes care of all usage
+ scenarios.
+\end_layout
+
+\begin_layout Description
+Unsupported:
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+HeVeA Manages to insert a bunch of extra ’br’ tags into the html which makes
+ the right edge all raggedy.
+ And the numbered list issue is also that there’s an extra ’br’ tag inside
+ the first item in each list, which looks weird.The four tools supported
+ by LyX (tex4ht, HeVeA, TtH and latex2html) gave inferior results a couple
+ of years ago, and were quite inflexible.
+ The author found the need for a good converter, while at the same time
+ acknowledging the difficulty of the problem.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+LaTeX2Html This rendition is quite sophisticated, and it ultimately makes
+ one little blog into a multiple page linked document.
+ Nice for some things, but not what I was after.
+ 
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+TtH: Works quite well, and could be easily incorporated into LyXBlogger,
+ but it does put footnotes at the bottom of the blog, where readers are
+ unlikely to recognize them as footnotes.
+\end_layout
+
+\begin_layout Description
+Q: Why did you leave out my favorite feature 
+\emph on
+<insert random LyX command here>
+\emph default
+?
+\end_layout
+
+\begin_layout Description
+A: In short, because nobody asked for it.
+ Usually it is better to first aim for your own needs and what others request,
+ and then worry about supporting everything, or you will never get anything
+ done.
+ Just let the 
+\begin_inset CommandInset href
+LatexCommand href
+name "author"
+target "mailto:jackdesert556@gmail.com"
+type "mailto:"
+
+\end_inset
+
+ know what features you would like to see added.
+ 
+\end_layout
+
+\begin_layout Description
+Q: I found a bug, what should I do?
+\end_layout
+
+\begin_layout Description
+A: Just send it to the author at 
+\begin_inset CommandInset href
+LatexCommand href
+name "jackdesert556@gmail.com"
+target "mailto:jackdesert556@gmail.com"
+type "mailto:"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Q: Where did LyXBlogger start?
+\end_layout
+
+\begin_layout Description
+A: You can read about the initial work on LyXBlogger 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "http://letseatalready.com/2010/03/08/lyxposter-blogging-with-lyx/"
+
+\end_inset
+
+, 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "http://letseatalready.com/2010/03/17/lyxblogger/"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "http://letseatalready.com/2010/03/23/lyxblogger-goes-xml-rpc/"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Q: How can I try out LyXBlogger without having to set up a WordPress blog?
+ 
+\end_layout
+
+\begin_layout Description
+A: Upload one of your documents to the 
+\begin_inset CommandInset href
+LatexCommand href
+name "LyXBlogger test site"
+target "http://blogtest.letseatalready.com"
+
+\end_inset
+
+, which is what LyXBlogger will try to do anyway until you change this default
+ behavior.
+ 
+\end_layout
+
+\begin_layout Description
+Q: Why does LyXBlogger take a long time to open when used with large documents?
+\end_layout
+
+\begin_layout Description
+A: Most of that time is waiting for the xhtml converter to run.
+\end_layout
+
+\begin_layout Description
+Q: Where can I get the latest documentation and information about LyXBlogger?
+\end_layout
+
+\begin_layout Description
+A: At 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.nongnu.org/lyxblogger"
+target "http://www.nongnu.org/lyxblogger"
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
