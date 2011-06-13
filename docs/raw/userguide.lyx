@@ -270,11 +270,7 @@ name "sub:System-Requirements"
 
 \end_inset
 
-System Requirements
-\end_layout
-
-\begin_layout Subsubsection
-Client
+System Requirements--Client
 \end_layout
 
 \begin_layout Standard
@@ -347,16 +343,133 @@ reference "sub:xhtml-Converters"
 )
 \end_layout
 
-\begin_layout Standard
-GNU/Linux and Mac OSX also require:
-\end_layout
-
 \begin_layout Itemize
-xterm (this came preinstalled on the systems I tested with.)
+xterm (only required for GNU/Linux and Mac OSX, but they are generally already
+ installed)
 \end_layout
 
 \begin_layout Subsubsection
-Server 
+Special Notes about Windows Installs
+\end_layout
+
+\begin_layout Standard
+The popular way to install LyX on Windows is to use the binary installer
+ available at 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.lyx.org/Download"
+target "http://www.lyx.org/Download"
+
+\end_inset
+
+.
+ This will install Python onto your system, but it may not work with LyXBlogger.
+ To check it out, open python by typing 
+\emph on
+python
+\emph default
+ at the command prompt.
+ 
+\end_layout
+
+\begin_layout LyX-Code
+c:
+\backslash
+>python 
+\end_layout
+
+\begin_layout LyX-Code
+Python 2.7.2 (default, Jun 12 2011, 15:08:59) [MSC v.1500 32 bit (Intel)] on
+ win 32 
+\end_layout
+
+\begin_layout LyX-Code
+Type "help", "copyright", "credits" or "license" for more information.
+ 
+\end_layout
+
+\begin_layout LyX-Code
+>>> import socket 
+\end_layout
+
+\begin_layout LyX-Code
+>>>
+\end_layout
+
+\begin_layout Standard
+If it imports the 
+\emph on
+socket
+\emph default
+ module with no errors, your python installation is fine.
+ If, however, you get an error 
+\end_layout
+
+\begin_layout LyX-Code
+ImportError: No module named _socket
+\end_layout
+
+\begin_layout Standard
+Then you have a problem.
+ The easy way around this is to rename your c:
+\backslash
+Program Files
+\backslash
+LyX20
+\backslash
+Python directory to something like c:
+\backslash
+Program Files
+\backslash
+LyX20
+\backslash
+Python_Renamed so that LyX won't use that install.
+ Then proceed to 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://python.org/download/"
+target "http://python.org/download/"
+
+\end_inset
+
+ and download and install the latest version of Python2.7.
+ Open Control Panes -> Classic View ->System -> Advanced System Settings
+ -> 
+\begin_inset Quotes eld
+\end_inset
+
+Advanced
+\begin_inset Quotes erd
+\end_inset
+
+ tab -> Environment Variables.
+ Open the one called 
+\emph on
+path
+\emph default
+ and append ;c:
+\backslash
+Python27 to the end of it (or wherever you installed Python.
+ Then go on to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Installation"
+
+\end_inset
+
+ to install LyXBlogger.
+ Once the LyXBlogger module is installed (under your new version of Python),
+ reopen LyX, click Tools -> Reconfigure.
+ Restart LyX, and if it's LyX 2.0 or later, 
+\emph on
+LyXBlogger
+\emph default
+ will automatically show up in your export menu.
+ 
+\end_layout
+
+\begin_layout Subsection
+System Requirements--Server 
 \end_layout
 
 \begin_layout Standard
@@ -435,6 +548,12 @@ An xhtml converter is required as an intermediate step between LyX and your
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Installation"
+
+\end_inset
+
 Installation
 \end_layout
 
