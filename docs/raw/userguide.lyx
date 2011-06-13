@@ -1,5 +1,5 @@
-#LyX 2.0.0beta1 created this file. For more info see http://www.lyx.org/
-\lyxformat 407
+#LyX 2.0.0beta4 created this file. For more info see http://www.lyx.org/
+\lyxformat 412
 \begin_document
 \begin_header
 \textclass article
@@ -32,13 +32,14 @@
 \use_default_options false
 \maintain_unincluded_children false
 \language english
+\language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
-\use_xetex false
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
@@ -302,7 +303,33 @@ status open
 
 \end_inset
 
+If your Python installation was part of a LyX binary for Windows, open python
+ and make sure the command 
+\begin_inset Quotes eld
+\end_inset
 
+import socket
+\begin_inset Quotes erd
+\end_inset
+
+ without quotes returns with no errors.
+ If it throws an error 
+\begin_inset Quotes eld
+\end_inset
+
+ImportError: No Module named _socket
+\begin_inset Quotes erd
+\end_inset
+
+, please install a standalone version of Python, availabe from 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://python.org/download/"
+target "http://python.org/download/"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -1150,7 +1177,7 @@ Work on LyXBlogger began in early 2010, has been gaining features as the
 Known Issues
 \end_layout
 
-\begin_layout List
+\begin_layout Labeling
 \labelwidthstring 00.00.0000
 LyXBlogger 0.38_BETA_1 is crashing mysteriously when using the LyXHTML format
  in LyX 2.0.
@@ -1257,14 +1284,14 @@ latex2html
 Supported: 
 \end_layout
 
-\begin_layout List
+\begin_layout Labeling
 \labelwidthstring 00.00.0000
 LyXHTML: Good support for footnotes.
  Built in to future versions of LyX.
  Integration is simple.
 \end_layout
 
-\begin_layout List
+\begin_layout Labeling
 \labelwidthstring 00.00.0000
 eLyXer: Good support for footnotes.
  Very easy to get a working CSS file together which takes care of all usage
@@ -1275,7 +1302,7 @@ eLyXer: Good support for footnotes.
 Unsupported:
 \end_layout
 
-\begin_layout List
+\begin_layout Labeling
 \labelwidthstring 00.00.0000
 HeVeA Manages to insert a bunch of extra ’br’ tags into the html which makes
  the right edge all raggedy.
@@ -1287,7 +1314,7 @@ HeVeA Manages to insert a bunch of extra ’br’ tags into the html which makes
  acknowledging the difficulty of the problem.
 \end_layout
 
-\begin_layout List
+\begin_layout Labeling
 \labelwidthstring 00.00.0000
 LaTeX2Html This rendition is quite sophisticated, and it ultimately makes
  one little blog into a multiple page linked document.
@@ -1295,7 +1322,7 @@ LaTeX2Html This rendition is quite sophisticated, and it ultimately makes
  
 \end_layout
 
-\begin_layout List
+\begin_layout Labeling
 \labelwidthstring 00.00.0000
 TtH: Works quite well, and could be easily incorporated into LyXBlogger,
  but it does put footnotes at the bottom of the blog, where readers are
