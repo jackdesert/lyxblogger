@@ -87,13 +87,15 @@ class InteractiveTestCase(unittest.TestCase):
     def setUp(self):
         print self
         self.args = 'python ../seed.py ../../folder_test/test_file.xhtml --run-here'
+        self.args_2 = 'python ../seed.py test_files/lyxhtml_w_images/LyXHtml_test_with_image.xhtml --run-here'
         delete_config_file()
     def test_00_publish_new_to_default_site(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'N'),
             OneLiner('multiple categories', '1,2,3'),
-            OneLiner('SHIFT', '(No Input Required)')]
+            OneLiner('You just published', '(No Input Required)')]
         interact_once(self.args, one_liners)
+        interact_once(self.args_2, one_liners)
     def test_01_publish_new_to_new_site(self):
         print("saying something")
         one_liners = [OneLiner('latest', 'N'),
@@ -103,30 +105,34 @@ class InteractiveTestCase(unittest.TestCase):
             OneLiner('latest', '1'),
             OneLiner('overwrite', 'N'),
             OneLiner('multiple categories', '1'),
-            OneLiner('SHIFT', '(No Input Required)')]
+            OneLiner('You just published', '(No Input Required)')]
         interact_once(self.args, one_liners)
+        interact_once(self.args_2, one_liners)
+
     def test_02_update_existing(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),
             OneLiner('post to overwrite', '2'),
             OneLiner('multiple categories', '1'),
-            OneLiner('SHIFT', '(No Input Required)')]
+            OneLiner('You just published', '(No Input Required)')]
         interact_once(self.args, one_liners)
+        interact_once(self.args_2, one_liners)
     def test_03_show_all_previous_posts(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),             # Update Existing
             OneLiner('post to overwrite', 'A'),     # Display all posts
             OneLiner('Hint', '2'),                  # Select post
             OneLiner('multiple categories', '1'),
-            OneLiner('SHIFT', '(No Input Required)')]
+            OneLiner('You just published', '(No Input Required)')]
         interact_once(self.args, one_liners)
+        interact_once(self.args_2, one_liners)
     def test_04_publish_new_ask_for_title(self):
         no_title_args = 'python ../seed.py ../../folder_test/no_title_test_file.xhtml --run-here'
         one_liners = [OneLiner('Please enter a title', 'My Cool Title'),
             OneLiner('latest', '0'),
             OneLiner('overwrite', 'N'),
             OneLiner('multiple categories', '1'),
-            OneLiner('SHIFT', '(No Input Required)')]
+            OneLiner('You just published', '(No Input Required)')]
         interact_once(no_title_args, one_liners)
 
 
