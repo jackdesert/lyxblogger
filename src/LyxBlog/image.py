@@ -29,6 +29,8 @@ import os, sys
 import re
 import wordpresslib
 from misc import pr3
+from handle_exceptions import handle_general_error
+
 
 def find_local_image_tag(in_html, ELYXER_ENGINE):
     if(ELYXER_ENGINE):
