@@ -86,21 +86,17 @@ class InteractiveTestCase(unittest.TestCase):
     # self.args = 'python seed.py ../folder_test/test_file.xhtml --run-here'
     def setUp(self):
         print self
-        self.args = 'python ../seed.py ../../folder_test/test_file.xhtml --run-here'
-        self.args_2 = 'python ../seed.py test_files/lyxhtml_w_images/LyXHtml_test_with_image.xhtml --run-here'
+        self.elyxer_args = 'python ../seed.py ../../folder_test/test_file.xhtml --run-here'
+        self.elyxer_no_title_args = 'python ../seed.py ../../folder_test/no_title_test_file.xhtml --run-here'
+        self.lyxhtml_args = 'python ../seed.py test_files/lyxhtml_w_images/LyXHtml_test_with_image.xhtml --run-here'
         delete_config_file()
         elyxer_args = 'python -m elyxer ../../folder_test/original_test_file.lyx ../../folder_test/test_file.xhtml'
+        elyxer_args_2 = 'python -m elyxer ../../folder_test/original_no_title.lyx ../../folder_test/no_title_test_file.xhtml'
         output = os.system(elyxer_args)
-        print ("\n\n\noutput: " + str(output))
+        output_2 = os.system(elyxer_args_2)
         assert(output == 0)
-    def test_01_publish_new_to_default_site(self):
-        one_liners = [OneLiner('latest', '0'),
-            OneLiner('overwrite', 'N'),
-            OneLiner('multiple categories', '1,2,3'),
-            OneLiner('You just published', '(No Input Required)')]
-        interact_once(self.args, one_liners)
-        interact_once(self.args_2, one_liners)
-    def test_02_publish_new_to_new_site(self):
+        assert(output_2 == 0)
+    def notest_01_publish_new_to_new_site(self):
         print("saying something")
         one_liners = [OneLiner('latest', 'N'),
             OneLiner('username', 'test'),
@@ -110,34 +106,38 @@ class InteractiveTestCase(unittest.TestCase):
             OneLiner('overwrite', 'N'),
             OneLiner('multiple categories', '1'),
             OneLiner('You just published', '(No Input Required)')]
-        interact_once(self.args, one_liners)
-        interact_once(self.args_2, one_liners)
+        interact_once(self.elyxer_args, one_liners)
 
-    def test_03_update_existing(self):
+    def notest_02_publish_new_to_default_site(self):
+        one_liners = [OneLiner('latest', '0'),
+            OneLiner('overwrite', 'N'),
+            OneLiner('multiple categories', '1,2,3'),
+            OneLiner('You just published', '(No Input Required)')]
+        interact_once(self.lyxhtml_args, one_liners)
+
+
+    def notest_03_update_existing(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),
             OneLiner('post to overwrite', '2'),
             OneLiner('multiple categories', '1'),
             OneLiner('You just published', '(No Input Required)')]
-        interact_once(self.args, one_liners)
-        interact_once(self.args_2, one_liners)
-    def test_04_show_all_previous_posts(self):
+        interact_once(self.elyxer_args, one_liners)
+    def notest_04_show_all_previous_posts(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),             # Update Existing
             OneLiner('post to overwrite', 'A'),     # Display all posts
             OneLiner('Hint', '2'),                  # Select post
             OneLiner('multiple categories', '1'),
             OneLiner('You just published', '(No Input Required)')]
-        interact_once(self.args, one_liners)
-        interact_once(self.args_2, one_liners)
+        interact_once(self.lyxhtml_args, one_liners)
     def test_05_publish_new_ask_for_title(self):
-        no_title_args = 'python ../seed.py ../../folder_test/no_title_test_file.xhtml --run-here'
         one_liners = [OneLiner('Please enter a title', 'My Cool Title'),
             OneLiner('latest', '0'),
             OneLiner('overwrite', 'N'),
             OneLiner('multiple categories', '1'),
             OneLiner('You just published', '(No Input Required)')]
-        interact_once(no_title_args, one_liners)
+        interact_once(self.elyxer_no_title_args, one_liners)        # Note this is the NO TITLE test
 
 
 #################  OLD TESTS    ####################
@@ -171,6 +171,9 @@ format that uses profiles
         #~ interact_once(self.args, one_liners)
 
 if __name__ == '__main__':
+    print "\n\nYou will be asked for a password twice"
+    print "Enter the password 'test' without the quotes each time"
+    time.sleep(5)
     unittest.main()
 
 
