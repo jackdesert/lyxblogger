@@ -82,24 +82,24 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
             assert(imageSrc.startswith('http://'))
         except AssertionError:
             print("There was a problem uploading your image.")
-            print("imageSrc should shart with http://")
+            print("imageSrc should start with http://")
             print("Please contact the author at jackdesert556@gmail.com")
-            sys.exit()
+            handle_general_error()
         try:
-            assert(valid_local_image_url in in_html)
+            assert(local_image_url in in_html)
         except AssertionError:
             print("There was a problem uploading your image.")
-            print("valid_local_image_url not found in in_html")
+            print("local_image_url not found in in_html")
             print("Please contact the author at jackdesert556@gmail.com")
-            sys.exit()
-        in_html = in_html.replace(valid_local_image_url, imageSrc)
+            handle_general_error()
+        in_html = in_html.replace(local_image_url, imageSrc)
         try:
-            assert(valid_local_image_url not in in_html)
+            assert(local_image_url not in in_html)
         except AssertionError:
             print("There was a problem uploading your image.")
-            print("valid_local_image_url still in in_html after upload")
+            print("local_image_url still in in_html after upload")
             print("Please contact the author at jackdesert556@gmail.com")
-            sys.exit()
+            handle_general_error()
         img_tag = find_local_image_tag(in_html, ELYXER_ENGINE)
     return(in_html)
 
