@@ -1,5 +1,5 @@
-#LyX 2.0.0beta1 created this file. For more info see http://www.lyx.org/
-\lyxformat 407
+#LyX 2.0.0beta4 created this file. For more info see http://www.lyx.org/
+\lyxformat 412
 \begin_document
 \begin_header
 \textclass article
@@ -32,13 +32,14 @@
 \use_default_options false
 \maintain_unincluded_children false
 \language english
+\language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
-\use_xetex false
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
@@ -222,6 +223,15 @@ index.html
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection*
+Version 0.39
+\end_layout
+
+\begin_layout Itemize
+Fixed bug where crashing with LyXHTML when lyxblogger invoked from a different
+ directory than the LyXHTML file.
 \end_layout
 
 \begin_layout Subsection*

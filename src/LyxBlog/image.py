@@ -71,7 +71,6 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
     while(img_tag):
         local_image_url = get_local_image_url(img_tag, ELYXER_ENGINE)
         valid_local_image_url = validate_url(local_image_url, in_DIR_OFFSET)
-
         filesize = str(os.path.getsize(valid_local_image_url) / 1024) + ' kB'
         short_name = get_short_name(valid_local_image_url)
         pr3("Uploading image: " + short_name + '.  Size: ' + filesize )
@@ -94,14 +93,16 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
             print("local_image_url not found in in_html")
             print("Please contact the author at jackdesert556@gmail.com")
             handle_general_error()
+        snapshot = in_html
         in_html = in_html.replace(local_image_url, imageSrc)
         try:
-            assert(local_image_url not in in_html)
+            assert(in_html != snapshot)
         except AssertionError:
             print("There was a problem uploading your image.")
-            print("local_image_url still in in_html after upload")
+            print("local_image_url not replaced with imageSrc in post")
             print("Please contact the author at jackdesert556@gmail.com")
             handle_general_error()
+
         img_tag = find_local_image_tag(in_html, ELYXER_ENGINE)
     return(in_html)
 
