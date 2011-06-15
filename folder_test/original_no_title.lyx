@@ -1,0 +1,360 @@
+#LyX 2.0.0beta4 created this file. For more info see http://www.lyx.org/
+\lyxformat 412
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+% DO NOT ALTER THIS PREAMBLE!!!
+%
+%This preamble is designed to ensure that the document prints
+% out as advertised. If you mess with this preamble,
+% parts of the document may not print out as expected.  If you
+% have problems LaTeXing this file, please contact 
+% the documentation team
+% email: lyx-docs@lists.lyx.org
+
+\usepackage{ifpdf} % part of the hyperref bundle
+\ifpdf % if pdflatex is used
+
+ % set fonts for nicer pdf view
+ \IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+
+\fi % end if pdflatex is used
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% redefine the \LyX macro for PDF bookmarks
+\def\LyX{\texorpdfstring{%
+  L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+  {LyX}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Tutorial de LyX"
+\pdf_author "LyX Team"
+\pdf_subject "LyX-documentación Tutorial"
+\pdf_keywords "LyX, Documentación"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue,pdfpagelayout=OneColumn, pdfnewwindow=true,pdfstartview=XYZ, plainpages=false, pdfpagelabels"
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 2
+\paperpagestyle headings
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Author
+por el Equipo LyX
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+Si tienes comentarios o correcciones de errores envíalos, por favor, a la
+ lista de correo de Documentación de LyX: 
+\family typewriter
+
+\begin_inset CommandInset href
+LatexCommand href
+target "lyx-docs@lists.lyx.org"
+type "mailto:"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Section
+¡Bienvenido a LyX! 
+\end_layout
+
+\begin_layout Standard
+Este archivo ha sido diseñado para todos aquellos que nunca han oído hablar
+ de LaTeX, o no lo conocen muy bien.
+ No tengas miedo, no tendrás que aprender LaTeX para poder usar LyX.
+ Ese es, al fin y al cabo, el punto fuerte de LyX: proporcionar un interfaz
+ casi WYSIWIG (
+\emph on
+What You See Is What You Get
+\emph default
+) para LaTeX.
+ Sin embargo, hay algunas cosas que necesitarás aprender para usar LyX de
+ forma eficiente.
+\end_layout
+
+\begin_layout Standard
+Probablemente has acabado consultando este documento porque has intentado
+ poner dos espacios después de un punto, o tres líneas en blanco entre dos
+ párrafos.
+ Tras mucha frustración, has comprobado que no se puede.
+ De hecho, descubrirás que la mayoría de los pequeños trucos que estabas
+ acostumbrado a usar con otros procesadores de texto no funcionan en LyX.
+ La razón es que la mayoría de los procesadores de texto que has usado hasta
+ ahora necesitaban que el usuario hiciera a mano todo el espaciado, los
+ cambios de tipo de letra, etc.
+ Así, no sólo se escribía el documento, sino que además se acababa realizando
+ todo el trabajo de formato y composición.
+ LyX realiza este trabajo por ti de forma consistente, dejando que te centres
+ en lo más importante: el contenido del documento.
+\end_layout
+
+\begin_layout Standard
+Así pues, sigue leyendo para aprender más sobre LyX.
+ Merece la pena que leas este tutorial.
+\end_layout
+
+\begin_layout Section
+Qué 
+\emph on
+es
+\emph default
+ este tutorial y qué 
+\emph on
+no
+\emph default
+ 
+\emph on
+es
+\end_layout
+
+\begin_layout Standard
+Antes de que empecemos con esta sección, queremos hacer un pequeño apunte.
+ El 
+\emph on
+Tutorial
+\emph default
+ usa la notación señalada en la 
+\emph on
+Introducción
+\emph default
+.
+ Si has llegado a este manual primero, lee la 
+\emph on
+Introducción
+\emph default
+ antes de continuar con este 
+\emph on
+Tutorial
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Una vez que ya sabes qué significa cada tipo de letra, vamos a hablar un
+ poco sobre la finalidad de este 
+\emph on
+Tutorial
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Para aprovechar al máximo el tutorial
+\end_layout
+
+\begin_layout Standard
+Este 
+\emph on
+Tutorial
+\emph default
+ se compone de ejemplos y ejercicios.
+ Para obtener el máximo provecho de este documento, deberías leerlo todo,
+ tecleando todos los pequeños detalles que te vayamos explicando (por simples
+ que sean) e intentando hacer todos los ejercicios para comprobar que lo
+ entiendes.
+ Por comodidad, puede interesarte imprimir la versión PDF de este documento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../Drawer/folder_test/mis_imágenes/más_imáge nes/Suzanne.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si estás familiarizado con LaTeX, probablemente podrás leer el 
+\emph on
+Tutorial
+\emph default
+ más deprisa, ya que muchas de las ideas de LyX son realmente ideas de LaTeX
+ disfrazadas.
+ No obstante, LyX tiene peculiaridades que tendrás que aprender.
+ Incluso aunque no te apetezca leer el resto del 
+\emph on
+Tutorial
+\emph default
+, harías bien en mirar la sección
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:latexusers"
+
+\end_inset
+
+, que ha sido escrita específicamente para usuarios experimentados de LaTeX.
+\end_layout
+
+\begin_layout Subsection
+Qué 
+\emph on
+no
+\emph default
+ vas a encontrar
+\end_layout
+
+\begin_layout Itemize
+Explicación detallada de todas las características de LyX.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Mira en la 
+\emph on
+Guía del usuario
+\emph default
+ cuando lo necesites.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Explicaciones detalladas de LaTeX.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Innecesario.
+ Si quieres aprender algunos de los trucos que se pueden hacer con LaTeX
+ en LyX, puedes echar un vistazo al manual 
+\emph on
+Objetos insertados
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Es el momento de seguir adelante y comenzar tu primer documento \SpecialChar \ldots{}
+
+\end_layout
+
+\begin_layout Chapter
+Empezando con LyX
+\end_layout
+
+\begin_layout Section
+Tu primer 
+\end_layout
+
+\begin_layout Section
+¡Errores!
+\end_layout
+
+\begin_layout Standard
+A veces, al ejecutar LaTeX habrá errores, cosas que LyX o el propio LaTeX
+ no entienden.
+ Cuando esto sucede, LyX abre el diálogo 
+\family sans
+Errores
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+LaTeX
+\family default
+.
+ Pulsando sobre un error en dicho diálogo, se mostrará información detallada
+ de LaTeX sobre dicho error y en el documento aparecerá seleccionado el
+ lugar en el que está el error.
+\end_layout
+
+\end_body
+\end_document

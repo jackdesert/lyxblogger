@@ -48,7 +48,7 @@ At the time of this writing (version 0.35+) not all functions in
 LyXBlogger have a unit test that tests them.
 '''
 
-
+import os
 import subprocess
 import unittest
 import time
@@ -89,14 +89,18 @@ class InteractiveTestCase(unittest.TestCase):
         self.args = 'python ../seed.py ../../folder_test/test_file.xhtml --run-here'
         self.args_2 = 'python ../seed.py test_files/lyxhtml_w_images/LyXHtml_test_with_image.xhtml --run-here'
         delete_config_file()
-    def test_00_publish_new_to_default_site(self):
+        elyxer_args = 'python -m elyxer ../../folder_test/original_test_file.lyx ../../folder_test/test_file.xhtml'
+        output = os.system(elyxer_args)
+        print ("\n\n\noutput: " + str(output))
+        assert(output == 0)
+    def test_01_publish_new_to_default_site(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'N'),
             OneLiner('multiple categories', '1,2,3'),
             OneLiner('You just published', '(No Input Required)')]
         interact_once(self.args, one_liners)
         interact_once(self.args_2, one_liners)
-    def test_01_publish_new_to_new_site(self):
+    def test_02_publish_new_to_new_site(self):
         print("saying something")
         one_liners = [OneLiner('latest', 'N'),
             OneLiner('username', 'test'),
@@ -109,7 +113,7 @@ class InteractiveTestCase(unittest.TestCase):
         interact_once(self.args, one_liners)
         interact_once(self.args_2, one_liners)
 
-    def test_02_update_existing(self):
+    def test_03_update_existing(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),
             OneLiner('post to overwrite', '2'),
@@ -117,7 +121,7 @@ class InteractiveTestCase(unittest.TestCase):
             OneLiner('You just published', '(No Input Required)')]
         interact_once(self.args, one_liners)
         interact_once(self.args_2, one_liners)
-    def test_03_show_all_previous_posts(self):
+    def test_04_show_all_previous_posts(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),             # Update Existing
             OneLiner('post to overwrite', 'A'),     # Display all posts
@@ -126,7 +130,7 @@ class InteractiveTestCase(unittest.TestCase):
             OneLiner('You just published', '(No Input Required)')]
         interact_once(self.args, one_liners)
         interact_once(self.args_2, one_liners)
-    def test_04_publish_new_ask_for_title(self):
+    def test_05_publish_new_ask_for_title(self):
         no_title_args = 'python ../seed.py ../../folder_test/no_title_test_file.xhtml --run-here'
         one_liners = [OneLiner('Please enter a title', 'My Cool Title'),
             OneLiner('latest', '0'),
