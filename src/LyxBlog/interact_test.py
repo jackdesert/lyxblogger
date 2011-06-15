@@ -96,7 +96,7 @@ class InteractiveTestCase(unittest.TestCase):
         output_2 = os.system(elyxer_args_2)
         assert(output == 0)
         assert(output_2 == 0)
-    def notest_01_publish_new_to_new_site(self):
+    def test_01_publish_new_to_new_site(self):
         print("saying something")
         one_liners = [OneLiner('latest', 'N'),
             OneLiner('username', 'test'),
@@ -107,8 +107,9 @@ class InteractiveTestCase(unittest.TestCase):
             OneLiner('multiple categories', '1'),
             OneLiner('You just published', '(No Input Required)')]
         interact_once(self.elyxer_args, one_liners)
+        interact_once(self.lyxhtml_args, one_liners)
 
-    def notest_02_publish_new_to_default_site(self):
+    def test_02_publish_new_to_default_site(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'N'),
             OneLiner('multiple categories', '1,2,3'),
@@ -116,14 +117,14 @@ class InteractiveTestCase(unittest.TestCase):
         interact_once(self.lyxhtml_args, one_liners)
 
 
-    def notest_03_update_existing(self):
+    def test_03_update_existing(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),
             OneLiner('post to overwrite', '2'),
             OneLiner('multiple categories', '1'),
             OneLiner('You just published', '(No Input Required)')]
         interact_once(self.elyxer_args, one_liners)
-    def notest_04_show_all_previous_posts(self):
+    def test_04_show_all_previous_posts(self):
         one_liners = [OneLiner('latest', '0'),
             OneLiner('overwrite', 'E'),             # Update Existing
             OneLiner('post to overwrite', 'A'),     # Display all posts

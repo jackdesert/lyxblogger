@@ -230,8 +230,8 @@ Version 0.39
 \end_layout
 
 \begin_layout Itemize
-Fixed bug where crashing with LyXHTML when lyxblogger invoked from a different
- directory than the LyXHTML file.
+Fixed bug where LyXBlogger would crash when a LyX 2.0 file, exported as LyXHTML,
+ was called by LyXBlogger from another directory.
 \end_layout
 
 \begin_layout Subsection*
