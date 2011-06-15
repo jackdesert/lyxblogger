@@ -80,7 +80,7 @@ Here's a jpeg:
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename jpg_in_same_dir.jpg
+	filename img_source/jpg_in_same_dir.jpg
 
 \end_inset
 
@@ -101,7 +101,7 @@ And here's a .png image
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename png_in_same_dir.png
+	filename img_source/png_in_same_dir.png
 
 \end_inset
 
