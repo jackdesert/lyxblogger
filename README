@@ -7,10 +7,17 @@
 #                                                                      #
 #################     D O C U M E N T A T I O N       ##################
 #                                                                      #
-#   Open docs/index.html in your favorite browser to view the full     #
-#   documentation for LyXBlogger. Alternatively, view the online docs  #
-#   for the most current version of LyXBlogger at                      #
-#   www.nongnu.org/lyxblogger.                                         #
+#   Complete documentation for LyXBlogger is available at              #
+#   http://www.nongnu.org/lyxblogger. (Yes, you really do need the     #
+#   'www' in the url.)                                                 #
+#                                                                      #
+#   Alternatively, you can generate the html docs from the original    #
+#   LyX files, which are located in lyxblogger/docs/raw.               #
+#                                                                      #
+#   Or, if you downloaded this package directly from                   #
+#   http://www.nongnu.org/lyxblogger, as opposed to git-cloning it     #
+#   from github, the generated docs are already in the package at      #
+#   lyxblogger-XX/docs/*.html.                                         #
 #                                                                      #
 #   Please submit any issues or suggestions to the author, listed      #
 #   below.                                                             #
