@@ -299,33 +299,9 @@ status open
 
 \end_inset
 
-If your Python installation was part of a LyX binary for Windows, open python
- and make sure the command 
-\begin_inset Quotes eld
-\end_inset
-
-import socket
-\begin_inset Quotes erd
-\end_inset
-
- without quotes returns with no errors.
- If it throws an error 
-\begin_inset Quotes eld
-\end_inset
-
-ImportError: No Module named _socket
-\begin_inset Quotes erd
-\end_inset
-
-, please install a standalone version of Python, availabe from 
-\begin_inset CommandInset href
-LatexCommand href
-name "http://python.org/download/"
-target "http://python.org/download/"
-
-\end_inset
-
-.
+ Python 2.7.2 (full installs) seem to work on Windows, but Python 2.7.0 on Linux
+ is still throwing errors for the developer.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1296,11 +1272,11 @@ Work on LyXBlogger began in early 2010, has been gaining features as the
 Known Issues
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-LyXBlogger 0.38_BETA_1 is crashing mysteriously when using the LyXHTML format
- in LyX 2.0.
- 
+\begin_layout Standard
+Not running yet with Python 2.7 on Linux.
+ Don't know why.
+ (Python 2.5, 2.6 work fine.
+ Python 2.7.2 on Windows works fine.)
 \end_layout
 
 \begin_layout Subsection
@@ -1334,8 +1310,10 @@ Q: What versions of LyX, Python, and operating systems are supported?
 
 \begin_layout Description
 A: It has been tested with LyX versions 1.6.4, 1.6.5, and 2.0.0.
- It has been tested with eLyXer version 0.41 and 0.42.
+ It has been tested with eLyXer version 0.41, 0.42, and 1.04.
  It has been tested with Python version 2.4 and 2.6.
+ (Python 2.7.2 on Windows also works if it's a full install, but Python 2.7.0
+ on Ubuntu is not working yet).
  It has been tested on Ubuntu 9.10, Mac OS X and Windows Vista 32-bit.
 \end_layout
 
@@ -1471,6 +1449,24 @@ type "mailto:"
 \end_inset
 
  know what features you would like to see added.
+ 
+\end_layout
+
+\begin_layout Description
+Q: Is there a mailing list? I need help with installation / configuration.
+\end_layout
+
+\begin_layout Description
+A: Check out the lyxblogger-users 
+\begin_inset CommandInset href
+LatexCommand href
+name "mailing list"
+target "http://lists.nongnu.org/mailman/listinfo/lyxblogger-users"
+type "mailto:"
+
+\end_inset
+
+.
  
 \end_layout
 

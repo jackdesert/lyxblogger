@@ -84,7 +84,7 @@ commands = ['mkdir ' + FOLDER,                      # Create a folder for this r
         'cp LICENSE ' + FOLDER,
         'rm -rf ' + FOLDER + 'INSTALL/build',       # Remove the build directory
         'rm -f ' + FOLDER + '*.pyc',                # Remove all *.pyc files
-        'rm ' + FOLDER + 'INSTALL/*.pyc',
+        'rm -f ' + FOLDER + 'INSTALL/*.pyc',
         'rm -f ' + FOLDER + 'src/*.pyc',
         'rm -f ' + FOLDER + 'src/io/*.pyc',
         'rm -f ' + FOLDER + 'src/util/*.pyc',
