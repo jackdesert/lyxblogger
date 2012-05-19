@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -42,7 +42,7 @@ def new_shell():
         pr3('Running on GNU/Linux')
     else:
         pr3('I\'m not sure what operating system you are running on.')
-        pr3('Please write the author at jackdesert556@gmail.com to report possible bug')
+        pr3('Please write the author at jackdesert@gmail.com to report possible bug')
     # GNU/Linux, Mac, and unidentified OS's call xterm
     return('xterm -T "LyXBlogger" -fg gold -bg black -fn 10x20 -e python %s %s %s ')
 

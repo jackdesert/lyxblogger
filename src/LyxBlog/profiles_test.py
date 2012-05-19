@@ -20,7 +20,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################

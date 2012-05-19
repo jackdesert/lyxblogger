@@ -1,5 +1,5 @@
-#LyX 2.0.0svn created this file. For more info see http://www.lyx.org/
-\lyxformat 384
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
 %                                                                      
 %   Copyright 2010 Jack Desert                                         
-%   <jackdesert556@gmail.com>                                          
+%   <JackDesert@gmail.com>                                          
 %   <http://www.LetsEATalready.com>                                    
 %                                                                      
 %%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
@@ -32,13 +32,14 @@
 \use_default_options false
 \maintain_unincluded_children false
 \language english
+\language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
-\use_xetex false
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
@@ -46,6 +47,7 @@
 
 \graphics default
 \default_output_format default
+\output_sync 0
 \bibtex_command default
 \index_command default
 \paperfontsize default
@@ -56,11 +58,13 @@
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -76,6 +80,7 @@
 \tracking_changes false
 \output_changes false
 \html_math_output 0
+\html_css_as_file 0
 \html_be_strict true
 \end_header
 
@@ -86,7 +91,7 @@ LyXBlogger Developer Guide
 \end_layout
 
 \begin_layout Author
-Jack Desert (jackdesert556@gmail.com)
+Jack Desert (JackDesert@gmail.com)
 \end_layout
 
 \begin_layout Standard
@@ -288,7 +293,68 @@ Unit Testing
 
 \begin_layout Standard
 Each file in src/LyxBlog/ has a file of unit tests to run.
+ The file 'test_seed.py' will run all the tests, but here is an example of
+ how to invoke just one of them.
+\end_layout
+
+\begin_layout LyX-Code
+cd lyxblogger/src/LyxBlog
+\end_layout
+
+\begin_layout LyX-Code
+python handle_exceptions.py
+\end_layout
+
+\begin_layout Standard
+In this test, it's testing out the exception screen, so if it looks like
+ it broke, hit ENTER three times, and the test should pass ok.
  
+\end_layout
+
+\begin_layout Standard
+Also note that you must 'cd' to the same directory the test is in, or else
+ it won't be able to find the test files to upload.
+\end_layout
+
+\begin_layout Standard
+To run all the tests together,
+\end_layout
+
+\begin_layout LyX-Code
+cd lyxblogger/src/LyxBlog
+\end_layout
+
+\begin_layout LyX-Code
+python handle_exceptions.py
+\end_layout
+
+\begin_layout Standard
+And remember to hit ENTER three times to get past the exception test screens.
+\end_layout
+
+\begin_layout Standard
+And finally, yes, you do need an internet connection to run the tests.
+\end_layout
+
+\begin_layout Subsection
+Test Caveats
+\end_layout
+
+\begin_layout Subsubsection
+image_test.py
+\end_layout
+
+\begin_layout Standard
+Must be run from the same directory as the file
+\end_layout
+
+\begin_layout Subsubsection
+interact_test.py
+\end_layout
+
+\begin_layout Standard
+You have to interact with it.
+ Hit enter when it gives you the option.
 \end_layout
 
 \begin_layout Subsection
@@ -683,7 +749,7 @@ A: Just report it directly to the
 \begin_inset CommandInset href
 LatexCommand href
 name "main author"
-target "mailto:jackdesert556@gmail.com"
+target "mailto:JackDesert@gmail.com"
 type "mailto:"
 
 \end_inset

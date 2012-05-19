@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <JackDesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -74,7 +74,8 @@ TARGET = BASE + '.tar.gz'
 ZIP_TARGET = BASE + '.zip'
 OUTPUT_DIRECTORY = 'releases/'
 # Create a folder with the relevant bits in it
-commands = ['mkdir ' + FOLDER,                      # Create a folder for this release
+commands = ['mkdir -p ' + OUTPUT_DIRECTORY,     # Make sure this directory exists
+        'mkdir ' + FOLDER,                      # Create a folder for this release
         'cp -r src ' + FOLDER ,                 # Put stuff in the folder
         'cp -r INSTALL ' + FOLDER ,
         'cd docs/raw \n ./export.py',           # Convert LyX documents to html for viewing
@@ -89,7 +90,7 @@ commands = ['mkdir ' + FOLDER,                      # Create a folder for this r
         'rm -f ' + FOLDER + 'src/io/*.pyc',
         'rm -f ' + FOLDER + 'src/util/*.pyc',
         'rm -f ' + FOLDER + 'src/LyxBlog/*.pyc',
-        'tar -zcvf' + TARGET + ' --exclude-vcs ' + FOLDER,       # Create a compressed tar file
+        'tar -zcvf' + TARGET + ' --exclude *.git ' + FOLDER,       # Create a compressed tar file
         'rm -rf ' + FOLDER,                                 # Remove the folder it was created from
         'tar -xvf ' + TARGET,                           # Open the tar file so now we have a folder without .svn
         'zip -r ' + ZIP_TARGET + ' ' + FOLDER,      # Create a compressed zip file

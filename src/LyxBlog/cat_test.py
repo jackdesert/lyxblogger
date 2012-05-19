@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -30,9 +30,11 @@
 import sys
 import unittest
 import wordpresslib
+from datetime import date
 from misc import pr3
 from cat import get_post_id
 from cat import same_length
+from cat import MiniPost
 
 
 class CatTestCase(unittest.TestCase):
@@ -41,9 +43,10 @@ class CatTestCase(unittest.TestCase):
         pass
     def test_get_post_id(self):
         # prepare client object
-        in_wp_obj = wordpresslib.WordPressClient('http://blogtest.letseatalready.com', 'test', 'test')
+        in_wp_obj = wordpresslib.WordPressClient(
+            'http://blogtest.letseatalready.com/xmlrpc.php', 'test', 'test')
         id = get_post_id(in_wp_obj)
-        self.assertEqual(1782, id)
+        #Should we be validating 'id'?
     def test_same_length(self):
         date_flag = 'DDDDD'
         a_string = 'abcdefghij'
@@ -53,7 +56,8 @@ class CatTestCase(unittest.TestCase):
         list_of_truncated_strings = same_length(list_of_strings, date_flag)
         self.assertTrue(len(list_of_truncated_strings[0]) < 60)
     def test_Mini_Post(self):
-        a = MiniPost(1,'Nice Title')
+        mydate = date(1982, 12, 25)
+        a = MiniPost(1,'Nice Title', mydate)
         self.assertTrue(a.title == 'Nice Title')
         self.assertTrue(a.post_id == 1)
 

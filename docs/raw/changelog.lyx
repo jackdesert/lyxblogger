@@ -1,5 +1,5 @@
-#LyX 2.0.0beta4 created this file. For more info see http://www.lyx.org/
-\lyxformat 412
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
 %                                                                      
 %   Copyright 2010 Jack Desert                                         
-%   <jackdesert556@gmail.com>                                          
+%   <JackDesert@gmail.com>                                          
 %   <http://www.LetsEATalready.com>                                    
 %                                                                      
 %%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
@@ -80,6 +80,7 @@
 \tracking_changes false
 \output_changes false
 \html_math_output 0
+\html_css_as_file 0
 \html_be_strict true
 \end_header
 
@@ -90,7 +91,7 @@ LyXBlogger Changelog
 \end_layout
 
 \begin_layout Author
-Jack Desert (jackdesert556@gmail.com)
+Jack Desert (JackDesert@gmail.com)
 \end_layout
 
 \begin_layout Standard
@@ -223,6 +224,15 @@ index.html
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsection*
+Version 0.40 (May 19, 2012)
+\end_layout
+
+\begin_layout Itemize
+src attributes for images are now relative, such that if you move your blog
+ from one domain to another, the images will still show up.
 \end_layout
 
 \begin_layout Subsection*

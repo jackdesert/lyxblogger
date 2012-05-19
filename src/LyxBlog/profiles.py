@@ -20,7 +20,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -64,7 +64,7 @@ def get_configpath():
         return "~/.lyxblogger/config.cfg"
     else:
         pr3('I\'m not sure what operating system you are running on.')
-        pr3('Please write the author at jackdesert556@gmail.com to report possible bug')
+        pr3('Please write the author at jackdesert@gmail.com to report possible bug')
         wait_for_consumer()
     # GNU/Linux, Mac, and unidentified OS's call xterm
 

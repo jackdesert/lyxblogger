@@ -21,7 +21,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <JackDesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -262,7 +262,7 @@ def new_shell():
         pr3('Running on GNU/Linux')
     else:
         pr3('I\'m not sure what operating system you are running on.')
-        pr3('Please write the author at jackdesert556@gmail.com to report possible bug')
+        pr3('Please write the author at JackDesert@gmail.com to report possible bug')
     # GNU/Linux, Mac, and unidentified OS's call xterm
     return('xterm -T "LyXBlogger" -fg gold -bg black -fn 10x20 -e python %s %s %s ')
 
@@ -295,7 +295,7 @@ from socket import gaierror
 
 def handle_general_error(name_string = '', suggestion_string = ''):
     pr3('\nAn error has occurred. If this error persists, please ')
-    pr3('contact the author at jackdesert556@gmail.com.')
+    pr3('contact the author at JackDesert@gmail.com.')
     pr3('The nutshell version is listed way down below. But here')
     pr3('are the details if you are interested:')
     print(traceback.print_exc())
@@ -420,7 +420,7 @@ def main(keys):
     elif (TITLE_EXPECTED_IN_BODY):
         pass
         #~ pr3 ('\nWARNING! The title of your entry may appear twice.')
-        #~ pr3 ('Please notify the author at jackdesert556@gmail.com to')
+        #~ pr3 ('Please notify the author at JackDesert@gmail.com to')
         #~ pr3 ('have this bug squashed.\n\n Press Enter to continue uploading.')
         #~ sys.stdin.readline()
         # What this really means is an opening title tag was found, but

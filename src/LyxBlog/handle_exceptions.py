@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -31,7 +31,7 @@ from misc import wait_for_consumer
 
 def handle_general_error(name_string = '', suggestion_string = ''):
     pr3('\nAn error has occurred. If this error persists, please ')
-    pr3('contact the author at jackdesert556@gmail.com.')
+    pr3('contact the author at jackdesert@gmail.com.')
     pr3('The nutshell version is listed way down below. But here')
     pr3('are the details if you are interested:')
     print(traceback.print_exc())

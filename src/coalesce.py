@@ -24,7 +24,7 @@
 
 import sys
 import os.path
-from io.fileline import *
+from elyxer_io.fileline import *
 from util.trace import Trace
 
 

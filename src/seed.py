@@ -20,7 +20,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -77,9 +77,9 @@ def main():
     pr3 ('License: GNU GPL3. See <http://www.gnu.org/licenses>\n')
 
     pr3('AUTHOR')
-    pr3('Copyright 2010 Jack Desert')
+    pr3('Copyright 2010, 2011, 2012 Jack Desert')
     pr3('Please send any comments, suggestions, or bug reports')
-    pr3('to jackdesert556@gmail.com')
+    pr3('to jackdesert@gmail.com')
     pr3("Author's personal blog: www.LetsEATalready.com\n")
 
     config = run_init_config()
@@ -129,6 +129,7 @@ def main():
     post.description = html
     # publish post
     pr3 ("\nWORDS\nLet's upload your thoughts")
+    
     filesize = str(os.path.getsize(input_file) / 1024) + ' kB'
     pr3("Uploading xhtml: " + input_file + '.  Size: ' + filesize )
     try:

@@ -1,5 +1,5 @@
-#LyX 2.0.0beta1 created this file. For more info see http://www.lyx.org/
-\lyxformat 407
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
 %                                                                      
 %   Copyright 2010 Jack Desert                                         
-%   <jackdesert556@gmail.com>                                          
+%   <JackDesert@gmail.com>                                          
 %   <http://www.LetsEATalready.com>                                    
 %                                                                      
 %%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
@@ -32,13 +32,14 @@
 \use_default_options false
 \maintain_unincluded_children false
 \language english
+\language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
-\use_xetex false
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
@@ -79,6 +80,7 @@
 \tracking_changes false
 \output_changes false
 \html_math_output 0
+\html_css_as_file 0
 \html_be_strict true
 \end_header
 
@@ -300,7 +302,7 @@ Screenshot
 \end_layout
 
 \begin_layout Standard
-Here is a screenshot of LyXBlogger 0.38_BETA_1 running on Ubuntu.
+Here is a screenshot of LyXBlogger 0.40 running on OSX.
 \end_layout
 
 \begin_layout Standard
@@ -357,14 +359,6 @@ target "userguide.html#sub:System-Requirements"
 \end_layout
 
 \begin_layout Subsection*
-Supported xhtml converters for LyX 1.6.x
-\end_layout
-
-\begin_layout Itemize
-eLyXer 
-\end_layout
-
-\begin_layout Subsection*
 Supported xhtml converters for LyX 2.0
 \end_layout
 
@@ -374,6 +368,14 @@ eLyXer
 
 \begin_layout Itemize
 LyXHTML (Internal in LyX 2.0) 
+\end_layout
+
+\begin_layout Subsection*
+Supported xhtml converters for LyX 1.6.x
+\end_layout
+
+\begin_layout Itemize
+eLyXer 
 \end_layout
 
 \begin_layout Section*
@@ -478,6 +480,10 @@ target "changelog.html"
 \end_layout
 
 \begin_layout Itemize
+0.40 images still load if you move your blog to a different domain
+\end_layout
+
+\begin_layout Itemize
 0.38 Added support for multiple saved profiles
 \end_layout
 
@@ -564,8 +570,8 @@ For questions, support, and bug reports, you can contact the main developer
  at 
 \begin_inset CommandInset href
 LatexCommand href
-name "JackDesert556@gmail.com"
-target "mailto:jackdesert556@gmail.com"
+name "JackDesert@gmail.com"
+target "mailto:JackDesert@gmail.com"
 type "mailto:"
 
 \end_inset

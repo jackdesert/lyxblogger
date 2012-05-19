@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%       A U T H O R       %%%%%%%%%%%%%
 %                                                                      
 %   Copyright 2010 Jack Desert                                         
-%   <jackdesert556@gmail.com>                                          
+%   <JackDesert@gmail.com>                                          
 %   <http://www.LetsEATalready.com>                                    
 %                                                                      
 %%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
@@ -90,7 +90,7 @@ LyXBlogger User Guide
 \end_layout
 
 \begin_layout Author
-Jack Desert (jackdesert556@gmail.com)
+Jack Desert (JackDesert@gmail.com)
 \end_layout
 
 \begin_layout Standard
@@ -1288,8 +1288,8 @@ If your problem does not appear in the above list, please let the author
  know; you can find him at 
 \begin_inset CommandInset href
 LatexCommand href
-name "JackDesert556@gmail.com"
-target "mailto:jackdesert556@gmail.com"
+name "JackDesert@gmail.com"
+target "mailto:JackDesert@gmail.com"
 type "mailto:"
 
 \end_inset
@@ -1443,7 +1443,7 @@ A: In short, because nobody asked for it.
 \begin_inset CommandInset href
 LatexCommand href
 name "author"
-target "mailto:jackdesert556@gmail.com"
+target "mailto:JackDesert@gmail.com"
 type "mailto:"
 
 \end_inset
@@ -1478,8 +1478,8 @@ Q: I found a bug, what should I do?
 A: Just send it to the author at 
 \begin_inset CommandInset href
 LatexCommand href
-name "jackdesert556@gmail.com"
-target "mailto:jackdesert556@gmail.com"
+name "JackDesert@gmail.com"
+target "mailto:JackDesert@gmail.com"
 type "mailto:"
 
 \end_inset

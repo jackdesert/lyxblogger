@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -33,9 +33,10 @@ from LyxBlog.misc import pr3
 # Note that we are not testing with python3.1 until the xmlrpclib is ported to it.
 # versions = ['python2.4 ', 'python2.5 ', 'python2.6 ']
 # simplifying tests by only testing one python version for now.
-versions = ['python2.6 ']
+versions = ['python2.7 ']
 # Running interact_test.py first
 files = ['handle_exceptions_test.py',   # Nice short test requiring user to hit enter
+        'cat_test.py',      # short test that requires user to enter a number & ENTER 
         'interact_test.py', # longer test that requires "test" password entered once
         'misc_test.py',
         'image_test.py',

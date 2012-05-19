@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -90,8 +90,8 @@ class InteractiveTestCase(unittest.TestCase):
         self.elyxer_no_title_args = 'python ../seed.py ../../folder_test/no_title_test_file.xhtml --run-here'
         self.lyxhtml_args = 'python ../seed.py test_files/lyxhtml_w_images/LyXHtml_test_with_image.xhtml --run-here'
         delete_config_file()
-        elyxer_args = 'python -m elyxer ../../folder_test/original_test_file.lyx ../../folder_test/test_file.xhtml'
-        elyxer_args_2 = 'python -m elyxer ../../folder_test/original_no_title.lyx ../../folder_test/no_title_test_file.xhtml'
+        elyxer_args = 'elyxer.py ../../folder_test/original_test_file.lyx ../../folder_test/test_file.xhtml'
+        elyxer_args_2 = 'elyxer.py ../../folder_test/original_no_title.lyx ../../folder_test/no_title_test_file.xhtml'
         output = os.system(elyxer_args)
         output_2 = os.system(elyxer_args_2)
         assert(output == 0)

@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <JackDesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -45,7 +45,7 @@ def insert_license(input_file):
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <JackDesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -77,7 +77,7 @@ def insert_license(input_file):
 file_list = ['changelog.lyx', 'devguide.lyx', 'index.lyx', 'userguide.lyx']
 for in_doc in file_list:
     out_doc = '../' + in_doc[0:-4] + '.html'
-    command_list = ['python -m elyxer --nofooter --css style.css ' + in_doc + ' ' + out_doc,
+    command_list = ['elyxer --nofooter --css style.css ' + in_doc + ' ' + out_doc,
         'rm -f ' + in_doc + '~']
     process_commands(command_list)
     insert_license(out_doc)

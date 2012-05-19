@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -32,7 +32,7 @@ from misc import pr3
 from handle_exceptions import handle_general_error
 
 
-def find_local_image_tag(in_html, ELYXER_ENGINE):
+def find_local_image_tag(in_html, ELYXER_ENGINE, marking_tag):
     if(ELYXER_ENGINE):
     # eLyXer img tags looks something like this:
     # <img class="embedded" src="rv-8_tiny.jpg" alt="figure rv-8_tiny.jpg" style="max-width: 2048px; max-height: 1536px; "/>
@@ -40,19 +40,19 @@ def find_local_image_tag(in_html, ELYXER_ENGINE):
         img_exp = re.compile('''
             <img\ class="embedded"\          # The beginning of an <img> tag -- note two escaped spaces
             src="           # Note use of double quotes instead of single
-            (?!http://)     # Negative lookahead expression (if it has http:// it's already been changed to web reference)
+            (?!%s)          # Negative lookahead (if it has marking_tag, it's already been changed to a web reference)
             ..*?            # Non-greedy (short as possible match) of stuff in middle
             />              # The closing of the <img> tag
-            ''', re.VERBOSE)
+            ''' % marking_tag, re.VERBOSE)
     else:
     # INTERNAL img tags look something like this:
     # <img src='0_home_jd_Escritorio_rv-8_tiny.jpg' alt='image: 0_home_jd_Escritorio_rv-8_tiny.jpg' />
         img_exp = re.compile('''
             <img\ src='     # The beginning of an <img> tag -- note the escaped space in the verbose regex
-            (?!http://)     # Negative lookahead expression (if it has http:// it's already been changed to web reference)
+            (?!%s)          # Negative lookahead (if it has marking_tag, it's already been changed to a web reference)
             ..*?            # Non-greedy (short as possible match) of stuff in middle
             />              # The closing of the <img> tag
-            ''', re.VERBOSE)
+            ''' % marking_tag, re.VERBOSE)
 
     img_obj = img_exp.search(in_html)
     img_tag = ''
@@ -63,13 +63,23 @@ def find_local_image_tag(in_html, ELYXER_ENGINE):
 
 
 def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
+    
+    # marking_tag is just something that marks a link as already changed
+    # from an absolute local path (like /home/jd/blogg/image.png)
+    # to a relative web page (like wp-admin/something/something/image.png)
+    # 
+    # The contents of marking tag must not be special characters to 
+    # regex, yet must be something that almost nobody would ever actually type 
+    # into a blogg. And yes, I pug two "G"s in my bloggs. :)
+    marking_tag = 'MqAqRqKqIqNqGqqTqAqG' 
     # Find local location of a single image within the (x)html file
-    img_tag = find_local_image_tag(in_html, ELYXER_ENGINE)
+    img_tag = find_local_image_tag(in_html, ELYXER_ENGINE, marking_tag)
     imageSrc = None
     if(img_tag):
         pr3 ("\nIMAGES\nLet's upload your images")
     while(img_tag):
         local_image_url = get_local_image_url(img_tag, ELYXER_ENGINE)
+        
         valid_local_image_url = validate_url(local_image_url, in_DIR_OFFSET)
         filesize = str(os.path.getsize(valid_local_image_url) / 1024) + ' kB'
         short_name = get_short_name(valid_local_image_url)
@@ -81,17 +91,20 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
             handle_gaierror()
         try:
             assert(imageSrc.startswith('http://'))
+            # make image local
+            url = wp_client_obj.url.replace('xmlrpc.php', '')
+            imageSrc = imageSrc.replace(url, marking_tag)
         except AssertionError:
             print("There was a problem uploading your image.")
             print("imageSrc should start with http://")
-            print("Please contact the author at jackdesert556@gmail.com")
+            print("Please contact the author at jackdesert@gmail.com")
             handle_general_error()
         try:
             assert(local_image_url in in_html)
         except AssertionError:
             print("There was a problem uploading your image.")
             print("local_image_url not found in in_html")
-            print("Please contact the author at jackdesert556@gmail.com")
+            print("Please contact the author at jackdesert@gmail.com")
             handle_general_error()
         snapshot = in_html
         in_html = in_html.replace(local_image_url, imageSrc)
@@ -100,11 +113,13 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
         except AssertionError:
             print("There was a problem uploading your image.")
             print("local_image_url not replaced with imageSrc in post")
-            print("Please contact the author at jackdesert556@gmail.com")
+            print("Please contact the author at jackdesert@gmail.com")
             handle_general_error()
 
-        img_tag = find_local_image_tag(in_html, ELYXER_ENGINE)
-    return(in_html)
+
+        img_tag = find_local_image_tag(in_html, ELYXER_ENGINE, marking_tag)
+        
+    return(in_html.replace(marking_tag, ''))
 
 # FIND local_image DIRECTORY
 # Look for either backslash (win32) or forslash (everything else)

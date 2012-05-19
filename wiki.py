@@ -141,7 +141,7 @@ Now you can invoke this converter from within LyX 2.0 by clicking ''File-> Expor
 
 
 !!Contributors
-*[[mailto:jackdesert556@gmail.com|Jack Desert]]
+*[[mailto:JackDesert@gmail.com|Jack Desert]]
 
 !! Categories
 (:comment Please categorize the page here :)

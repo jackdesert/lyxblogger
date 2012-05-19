@@ -3,7 +3,7 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <jackdesert556@gmail.com>                                          #
+#   <jackdesert@gmail.com>                                          #
 #   <http://www.LetsEATalready.com>                                    #
 #                                                                      #
 ######################      L I C E N S E     ##########################
@@ -97,7 +97,7 @@ def get_html(input_file, CUT_FLAG):
     elif (TITLE_EXPECTED_IN_BODY):
         pass
         #~ pr3 ('\nWARNING! The title of your entry may appear twice.')
-        #~ pr3 ('Please notify the author at jackdesert556@gmail.com to')
+        #~ pr3 ('Please notify the author at jackdesert@gmail.com to')
         #~ pr3 ('have this bug squashed.\n\n Press Enter to continue uploading.')
         #~ sys.stdin.readline()
         # What this really means is an opening title tag was found, but
@@ -117,6 +117,10 @@ def get_html(input_file, CUT_FLAG):
     # Remove Arrows from footnotes and margin notes
     html = html.replace('[→', '[')
     html = html.replace('→]', ']')
+    
+    # Change the elyxer-generated id to a class, since wordpresslib appears to 
+    # strip out all ids upon upload
+    html = html.replace("<div class=\"footer\" id=\"generated-by\">", "<div class=\"footer generated-by-elyxer\">")
 
     return html, blog_title, ELYXER_ENGINE
 

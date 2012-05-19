@@ -1,5 +1,5 @@
-#LyX 2.0.0beta4 created this file. For more info see http://www.lyx.org/
-\lyxformat 412
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -53,6 +53,7 @@
 \tracking_changes false
 \output_changes false
 \html_math_output 0
+\html_css_as_file 0
 \html_be_strict false
 \end_header
 
@@ -84,7 +85,7 @@ Bullets!
 
 \begin_layout Itemize
 \begin_inset Graphics
-	filename mis_imágenes/más_imáge nes/Suzanne.jpg
+	filename imáge nes/suzanne.jpg
 
 \end_inset
 
