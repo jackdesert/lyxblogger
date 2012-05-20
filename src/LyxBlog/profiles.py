@@ -21,7 +21,7 @@
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
 #   <jackdesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #
@@ -129,7 +129,7 @@ def get_credentials(config):
     # Select existing profile (and setting last_profile to that)
     # or create a new profile in the config file
     while (1):
-        pr3 ('\nPROFILES')
+        pr3 ('\nSELECT BLOG')
         cfg_dict = display_profiles(config)
 
         last_serial = config.get('DEFAULT', 'last_profile')
@@ -276,7 +276,7 @@ class Credentials:
     @classmethod
     def defaults(cls):
         "Initialize Credentials with default values"
-        return cls('http://blogtest.letseatalready.com/xmlrpc.php',
+        return cls('http://blogtest.twomorelines.com/xmlrpc.php',
                    'test',
                    'test')
 

@@ -8,7 +8,7 @@
 %                                                                      
 %   Copyright 2010 Jack Desert                                         
 %   <JackDesert@gmail.com>                                          
-%   <http://www.LetsEATalready.com>                                    
+%   http://TwoMoreLines.com                                    
 %                                                                      
 %%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
 %                                                                      
@@ -257,44 +257,30 @@ LyXBlogger allows you to post to your WordPress blog right from LyX.
 \end_layout
 
 \begin_layout Itemize
-Provides XML-RPC connectivity to WordPress Blogs 
+Invokes the html converter of your choice (eLyXer and LyXHTML supported)
 \end_layout
 
 \begin_layout Itemize
-Uploads images and formatted text automatically 
+Uploads images and text directly to your blog
 \end_layout
 
 \begin_layout Itemize
-Supports eLyXer XHTML format 
+Remembers credentials from multiple blog sites
 \end_layout
 
 \begin_layout Itemize
-Supports LyX 2.0 (internal) LyXHTML format 
+Allows you to either create new posts or update older ones
 \end_layout
 
 \begin_layout Itemize
-Extracts title from document and uses it as the posting title 
+Preserves the document hierarchy as CSS classes, which you can style with
+ a master stylesheet for consistent look across your blog.
 \end_layout
 
 \begin_layout Itemize
-Preserves document organization hierarchy as CSS classes 
-\end_layout
-
-\begin_layout Itemize
-Provides consistent look among all your blog entries based on your master
- CSS file 
-\end_layout
-
-\begin_layout Itemize
-Retrieves category list from server to allow user selection 
-\end_layout
-
-\begin_layout Itemize
-Gives option to post to test site at blogtest.letseatalready.com 
-\end_layout
-
-\begin_layout Itemize
-Displays messages and gets user input through xterm window 
+Provides a test site (blogtest.twomorelines.com) where you can try out LyXBlogger
+ without polluting your own blog.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -359,7 +345,7 @@ target "userguide.html#sub:System-Requirements"
 \end_layout
 
 \begin_layout Subsection*
-Supported xhtml converters for LyX 2.0
+Supported xhtml converters
 \end_layout
 
 \begin_layout Itemize
@@ -367,15 +353,7 @@ eLyXer
 \end_layout
 
 \begin_layout Itemize
-LyXHTML (Internal in LyX 2.0) 
-\end_layout
-
-\begin_layout Subsection*
-Supported xhtml converters for LyX 1.6.x
-\end_layout
-
-\begin_layout Itemize
-eLyXer 
+LyXHTML (using LyX 2.0 or later) 
 \end_layout
 
 \begin_layout Section*
@@ -422,8 +400,7 @@ Test Drive
 \end_layout
 
 \begin_layout Standard
-LyXBlogger comes out of the box ready to upload to a test site (blogtest.letseata
-lready.com) where you can test its posting capability.
+LyXBlogger comes out of the box ready to upload to a test site (blogtest.twomorelines.com) where you can test its posting capability.
  LyXBlogger will ask you whether to post to the test site or not.
  For details, see see the 
 \begin_inset CommandInset href
@@ -446,7 +423,7 @@ For the literary inclined, you can read about the initial work on LyXBlogger
 \begin_inset CommandInset href
 LatexCommand href
 name "here"
-target "http://letseatalready.com/2010/03/08/lyxposter-blogging-with-lyx/"
+target "http://twomorelines.com/lyxposter-blogging-with-lyx/"
 
 \end_inset
 
@@ -454,7 +431,7 @@ target "http://letseatalready.com/2010/03/08/lyxposter-blogging-with-lyx/"
 \begin_inset CommandInset href
 LatexCommand href
 name "here"
-target "http://letseatalready.com/2010/03/17/lyxblogger/"
+target "http://twomorelines.com/lyxblogger/"
 
 \end_inset
 
@@ -462,7 +439,7 @@ target "http://letseatalready.com/2010/03/17/lyxblogger/"
 \begin_inset CommandInset href
 LatexCommand href
 name "here"
-target "http://letseatalready.com/2010/03/23/lyxblogger-goes-xml-rpc/"
+target "http://http://twomorelines.com/lyxblogger-goes-xml-rpc/"
 
 \end_inset
 
@@ -476,88 +453,6 @@ target "changelog.html"
 \end_inset
 
 .
- For the rest of you, here is the history of LyXBlogger in a nutshell:
-\end_layout
-
-\begin_layout Itemize
-0.40 images still load if you move your blog to a different domain
-\end_layout
-
-\begin_layout Itemize
-0.38 Added support for multiple saved profiles
-\end_layout
-
-\begin_layout Itemize
-0.37 Fixed a bug from 0.36 where images didn't show up
-\end_layout
-
-\begin_layout Itemize
-0.36 Allows editing of previous posts
-\end_layout
-
-\begin_layout Itemize
-0.35 Added sane exception handling and clear error messages.
-\end_layout
-
-\begin_layout Itemize
-0.34 Added support for Microsoft Windows.
- Verified support for Mac OS X.
- Changed name to LyXBlogger (with a capital 
-\begin_inset Quotes eld
-\end_inset
-
-X
-\begin_inset Quotes erd
-\end_inset
-
-).
- Modularized source code and used 
-\begin_inset CommandInset href
-LatexCommand href
-name "eLyXer's"
-target "http://www.nongnu.org/elyxer/"
-
-\end_inset
-
- coalesce.py to form it into one module for distribution.
- Includes unit testing code.
- Changed release license to 
-\begin_inset CommandInset href
-LatexCommand href
-name "GNU GPL3"
-target "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Itemize
-0.32: Asks for confirmation before uploading to default domain.
- Prompts for a new title if eLyXer's default of 'Converted document' is
- found.
- 
-\end_layout
-
-\begin_layout Itemize
-0.31: Adds eLyXer support for LyX 1.6.x and 2.0 
-\end_layout
-
-\begin_layout Itemize
-0.30: Changed to xml-rpc connectivity for automated posting of xhtml and
- images.
- Runs on LyX 2.0 (internal) LyXHTML format.
- 
-\end_layout
-
-\begin_layout Itemize
-0.20 and previous: Initial releases pasted html code to the clipboard so
- it was ready to paste wherever you needed it, like into a text editor or
- a browser-based composition window.
- This still has a lot of usefulness for creating forum posts and for other
- projects, too.
- May be revived in the future under another project name.
  
 \end_layout
 

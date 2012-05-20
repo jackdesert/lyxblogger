@@ -8,7 +8,7 @@
 %                                                                      
 %   Copyright 2010 Jack Desert                                         
 %   <JackDesert@gmail.com>                                          
-%   <http://www.LetsEATalready.com>                                    
+%   http://TwoMoreLines.com                                    
 %                                                                      
 %%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
 %                                                                      
@@ -765,8 +765,8 @@ Q: Where can I get the latest documentation and information about LyXBlogger?
 A: At 
 \begin_inset CommandInset href
 LatexCommand href
-name "http://www.nongnu.org/lyxblogger"
-target "http://www.nongnu.org/lyxblogger"
+name "http://lyxblogger.nongnu.org"
+target "http://lyxblogger.nongnu.org"
 
 \end_inset
 

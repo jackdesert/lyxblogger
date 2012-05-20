@@ -21,7 +21,7 @@
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
 #   <jackdesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #
@@ -73,15 +73,11 @@ def main():
     term_open(input_file)
 
     pr3 ('LYXBLOGGER')
-    pr3 ('Welcome to LyXBlogger, hosted at www.nongnu.org/lyxblogger')
-    pr3 ('License: GNU GPL3. See <http://www.gnu.org/licenses>\n')
-
-    pr3('AUTHOR')
-    pr3('Copyright 2010, 2011, 2012 Jack Desert')
+    pr3('Copyright 2010 - 2012 Jack Desert')
     pr3('Please send any comments, suggestions, or bug reports')
     pr3('to jackdesert@gmail.com')
-    pr3("Author's personal blog: www.LetsEATalready.com\n")
-
+    pr3 ('License: GNU GPL3. See <http://www.gnu.org/licenses>')
+    pr3('Documentation at http://lyxblogger.nongnu.org\n')
     config = run_init_config()
     time.sleep(config.getfloat('DEFAULT', 'delay'))
 

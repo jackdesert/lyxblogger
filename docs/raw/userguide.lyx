@@ -8,7 +8,7 @@
 %                                                                      
 %   Copyright 2010 Jack Desert                                         
 %   <JackDesert@gmail.com>                                          
-%   <http://www.LetsEATalready.com>                                    
+%   http://TwoMoreLines.com                                    
 %                                                                      
 %%%%%%%%%%%%     L I C E N S E     %%%%%%%%%%%%%%%
 %                                                                      
@@ -662,8 +662,7 @@ Test Drive
 \end_layout
 
 \begin_layout Standard
-LyXBlogger comes out of the box ready to upload to a test site (blogtest.letseata
-lready.com) where you can test its posting capability.
+LyXBlogger comes out of the box ready to upload to a test site (blogtest.twomorelines.com) where you can test its posting capability.
  LyXBlogger will ask you whether to post to the test site or not.
  Once you can post to the test site, just run LyXBlogger again, this time
  telling it to use a different site instead.
@@ -676,8 +675,7 @@ Profiles
 
 \begin_layout Standard
 New in version 0.38 is the ability to save several profiles.
- LyXBlogger comes out of the box with a profile called test@blogtest.letseatalrea
-dy.com.
+ LyXBlogger comes out of the box with a profile called test@blogtest.twomorelines.com.
  Anyone may post to this blog.
  It's for practicing.
  Then once you get the hang of how LyXBlogger works, add your own profile
@@ -1082,8 +1080,7 @@ Before the post is published, each image in your LyX document is uploaded
  This may come as a surprise, but the bigger the image (in MegaBytes), the
  longer it takes to upload the image.
  The connectivity speed of your server plays a role here, as well.
- If it's taking a long time, try posting to the test site at blogtest.letseatalre
-ady.com to compare upload speed.
+ If it's taking a long time, try posting to the test site at blogtest.twomorelines.com to compare upload speed.
  
 \end_layout
 
@@ -1497,7 +1494,7 @@ A: You can read about the initial work on LyXBlogger
 \begin_inset CommandInset href
 LatexCommand href
 name "here"
-target "http://letseatalready.com/2010/03/08/lyxposter-blogging-with-lyx/"
+target "http://twomorelines.com/lyxposter-blogging-with-lyx/"
 
 \end_inset
 
@@ -1505,7 +1502,7 @@ target "http://letseatalready.com/2010/03/08/lyxposter-blogging-with-lyx/"
 \begin_inset CommandInset href
 LatexCommand href
 name "here"
-target "http://letseatalready.com/2010/03/17/lyxblogger/"
+target "http://twomorelines.com/lyxblogger/"
 
 \end_inset
 
@@ -1513,7 +1510,7 @@ target "http://letseatalready.com/2010/03/17/lyxblogger/"
 \begin_inset CommandInset href
 LatexCommand href
 name "here"
-target "http://letseatalready.com/2010/03/23/lyxblogger-goes-xml-rpc/"
+target "http://twomorelines.com/lyxblogger-goes-xml-rpc/"
 
 \end_inset
 
@@ -1530,7 +1527,7 @@ A: Upload one of your documents to the
 \begin_inset CommandInset href
 LatexCommand href
 name "LyXBlogger test site"
-target "http://blogtest.letseatalready.com"
+target "http://blogtest.twomorelines.com"
 
 \end_inset
 
@@ -1555,8 +1552,8 @@ Q: Where can I get the latest documentation and information about LyXBlogger?
 A: At 
 \begin_inset CommandInset href
 LatexCommand href
-name "http://www.nongnu.org/lyxblogger"
-target "http://www.nongnu.org/lyxblogger"
+name "http://lyxblogger.nongnu.org"
+target "http://lyxblogger.nongnu.org"
 
 \end_inset
 

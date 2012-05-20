@@ -4,7 +4,7 @@
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
 #   <jackdesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #
@@ -109,7 +109,7 @@ class ImageTestCase(unittest.TestCase):
         dict = {'<img class="embedded" src="test_files/images/table.jpg" />' : True,
             "<img src='test_files/images/table.jpg' />" : False}
         wp = wordpresslib.WordPressClient(
-            'http://blogtest.letseatalready.com/xmlrpc.php', 'test', 'test')
+            'http://blogtest.twomorelines.com/xmlrpc.php', 'test', 'test')
         for html, ELYXER_ENGINE in dict.iteritems():
             pr3('\n\n***   Testing the upload of a single image   ***')
             up_images(html, wp, ELYXER_ENGINE, in_DIR_OFFSET = '')

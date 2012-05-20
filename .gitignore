@@ -1,6 +1,7 @@
 *.svn/
 *.pyc
 *.lyx~
+*.lyx#
 docs/*.html
 INSTALL/lyxblogger.py
 INSTALL/build/

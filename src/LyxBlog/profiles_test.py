@@ -21,7 +21,7 @@
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
 #   <jackdesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #

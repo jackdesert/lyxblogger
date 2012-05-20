@@ -4,7 +4,7 @@
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
 #   <jackdesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #
@@ -44,7 +44,7 @@ class CatTestCase(unittest.TestCase):
     def test_get_post_id(self):
         # prepare client object
         in_wp_obj = wordpresslib.WordPressClient(
-            'http://blogtest.letseatalready.com/xmlrpc.php', 'test', 'test')
+            'http://blogtest.twomorelines.com/xmlrpc.php', 'test', 'test')
         id = get_post_id(in_wp_obj)
         #Should we be validating 'id'?
     def test_same_length(self):

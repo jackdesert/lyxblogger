@@ -45,7 +45,7 @@ LyX. LyXBlogger 0.32 comes with the following features:
 *Preserves document organization hierarchy as CSS classes
 *Provides consistent look among all your blog entries based on your master CSS file
 *Retrieves category list from server to allow user selection
-*Gives option to post to test site at blogtest.letseatalready.com
+*Gives option to post to test site at blogtest.twomorelines.com
 *Displays messages and gets user input through xterm window
 
 !!Download
@@ -78,16 +78,16 @@ Invoke LyXBlogger as
 ->@@$ lyxblogger input_file.(x)html@@
 
 !!!Auto Log In
-LyXBlogger comes out of the box ready to upload to a test site (blogtest.letseatalready.com) where you can test its posting capability. LyXBlogger will ask you whether to post to the test site or not.
+LyXBlogger comes out of the box ready to upload to a test site (blogtest.twomorelines.com) where you can test its posting capability. LyXBlogger will ask you whether to post to the test site or not.
 Once you can post to the test site, just run LyXBlogger again, this time telling it to use a different site instead. It will prompt you for your domain name, user name, and password.
 
 To facilitate automatic login to your own site, just change the following lines
 in the @@USER DEFINED VARIABLES@@ section of the code:
-->@@AUTO_URL = [='http://blogtest.letseatalready.com/xmlrpc.php'=]@@
+->@@AUTO_URL = [='http://blogtest.twomorelines.com/xmlrpc.php'=]@@
 ->@@AUTO_USER = 'test'@@
 ->@@AUTO_PASSWORD = 'test'@@
 ->@@AUTO_LOGIN = True@@
-Simply put your own domain in place of blogtest.letseatalready.com, leaving the @@[=http://=]@@ and the  @@/xmlrpc.php@@ parts intact. Make sure you change @@AUTO_USER@@ to your WordPress user name and @@AUTO_PASSWORD@@ to your WordPress password. Save LyXBlogger and run it again.
+Simply put your own domain in place of blogtest.twomorelines.com, leaving the @@[=http://=]@@ and the  @@/xmlrpc.php@@ parts intact. Make sure you change @@AUTO_USER@@ to your WordPress user name and @@AUTO_PASSWORD@@ to your WordPress password. Save LyXBlogger and run it again.
 
 !!LyX Integration
 You may choose to use LyXBlogger solely from the command line. But it is often

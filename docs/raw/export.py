@@ -3,8 +3,8 @@
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <JackDesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   <JackDesert@gmail.com>                                             #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #
@@ -45,8 +45,8 @@ def insert_license(input_file):
 #####################       A U T H O R       ##########################
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
-#   <JackDesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   <JackDesert@gmail.com>                                             #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #

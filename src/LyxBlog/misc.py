@@ -4,7 +4,7 @@
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
 #   <jackdesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #
@@ -55,12 +55,12 @@ def get_format(in_html):
         if '<meta name="GENERATOR" content="LyX' in html_head:
             pr3("You are using the LyXHTML format.")
             pr3("LyXBlogger also supports the eLyXer format.")
-            pr3("For more information, see the user's guide at www.nongnu.org/lyxblogger.")
+            pr3("For more information, see the user's guide at lyxblogger.nongnu.org.")
             return False    # False means LyxHTL format
         elif '<meta name="generator" content="http://www.nongnu.org/elyxer/"/>' in html_head:
             pr3("You are using the eLyXer format.")
             pr3("LyXBlogger also supports LyX 2.0's internal LyXHTML format.")
-            pr3("For more information, see the user's guide at www.nongnu.org/lyxblogger.")
+            pr3("For more information, see the user's guide at lyxblogger.nongnu.org.")
             return True     # True means eLyXer format
         elif '<META name="GENERATOR" content="hevea' in html_head:
             pr3('*****   ERROR:   Unsupported format:  Hevea   *****')
@@ -75,7 +75,7 @@ def get_format(in_html):
 
     pr3("LyXBlogger supports the eLyXer format and LyX 2.0's internal")
     pr3("LyXHTML format. The input file you provided appears to be neither of")
-    pr3("these. For more information, see the user's guide at www.nongnu.org/lyxblogger.")
+    pr3("these. For more information, see the user's guide at lyxblogger.nongnu.org.")
     sys.exit(0)     # Halt Program if invalid html found.
 
 

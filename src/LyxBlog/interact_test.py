@@ -4,7 +4,7 @@
 #                                                                      #
 #   Copyright 2010 Jack Desert                                         #
 #   <jackdesert@gmail.com>                                          #
-#   <http://www.LetsEATalready.com>                                    #
+#   http://TwoMoreLines.com                                            #
 #                                                                      #
 ######################      L I C E N S E     ##########################
 #                                                                      #
@@ -100,7 +100,7 @@ class InteractiveTestCase(unittest.TestCase):
         print("saying something")
         one_liners = [OneLiner('latest', 'N'),
             OneLiner('username', 'test'),
-            OneLiner('Example: cool_site.wordpress.com', 'blogtest.letseatalready.com'),
+            OneLiner('Example: cool_site.wordpress.com', 'blogtest.twomorelines.com'),
             OneLiner('plain text', 'YOU_MUST_MANUALLY_TYPE_THIS_PASSWORD_ROMPT'),
             OneLiner('latest', '1'),
             OneLiner('overwrite', 'N'),
@@ -150,7 +150,7 @@ format that uses profiles
     # This test commented out so that there is only test that requires manual password typing, and it's first
     #~ def test_01_update_existing_alt_URL(self):
         #~ one_liners = [OneLiner('Publish this document', 'n'),
-            #~ OneLiner('Example:', 'blogtest.letseatalready.com'),
+            #~ OneLiner('Example:', 'blogtest.twomorelines.com'),
             #~ OneLiner('WordPress username', 'test'),
             #~ OneLiner('WordPress password', 'test'),
             #~ OneLiner('overwrite', 'E'),
@@ -161,7 +161,7 @@ format that uses profiles
     # This test commented out so that there is only test that requires manual password typing, and it's first
     #~ def test_02_show_all_previous_posts_alt_URL(self):
         #~ one_liners = [OneLiner('Publish this document', 'n'),
-            #~ OneLiner('Example:', 'blogtest.letseatalready.com'),
+            #~ OneLiner('Example:', 'blogtest.twomorelines.com'),
             #~ OneLiner('WordPress username', 'test'),
             #~ OneLiner('WordPress password', 'test'),
             #~ OneLiner('overwrite', 'E'),
