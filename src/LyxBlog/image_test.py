@@ -79,7 +79,6 @@ class ImageTestCase(unittest.TestCase):
             self.assertEqual(validate_url(input, DIR_OFFSET), output)
 
     def test_find_local_image_tag(self):
-        marking_tag = 'hqhqhqhqhqhqhqhqhqhq' 
         dict = {'test_files/basic_blog.html' : True,
             'test_files/basic_blog.xhtml' : False}
         for in_file, ELYXER_ENGINE in dict.iteritems():
@@ -88,13 +87,13 @@ class ImageTestCase(unittest.TestCase):
             html = f.read()
             f.close()
             for counter in range(2):
-                tag = find_local_image_tag(html, ELYXER_ENGINE, marking_tag)
+                tag = find_local_image_tag(html, ELYXER_ENGINE)
                 self.assertTrue(tag)
                 # Remove the tag and make sure it's gone
                 html = html.replace(tag, '')
                 self.assertFalse(tag in html)
             # Third image is nonexistent
-            tag = find_local_image_tag(html, ELYXER_ENGINE, marking_tag)
+            tag = find_local_image_tag(html, ELYXER_ENGINE)
             self.assertFalse(tag)
     def test_get_local_image_url(self):
         dict = {'''<img src='some_url' alt='none' />''' : ('some_url', False),
