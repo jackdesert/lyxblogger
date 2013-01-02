@@ -25,29 +25,22 @@
 #                                                                      #
 ########################################################################
 
+# Code to test image.py
+
 import sys
+import unittest
+import pdb
+from display import Display
 
-class Display:
-    def __init__(self):
-        self.indent = 4 * ' ' 
+class DisplayTestCase(unittest.TestCase):
 
-    def __pr3(self, text):
-        # Use sys.stdout instead of print so results can be used for automated testing
-        # For some reason a newline character is required to flush ?
-        # That's okay, because we'll use str.rstrip on the other side
-        text = str(text)  # This makes sure that anything printable can be passed through
-        sys.stdout.write(text + '\n')
-        # Each line must be flushed so it can be read by the other side.
-        sys.stdout.flush()
-      
-    def print_format(self, in_format):
-        msg = "Format: {0}".format(in_format)
-        msg = self.__indent(msg)
-        self.__pr3(msg)
-        return(msg)
+    def setUp(self):
+        self.display = Display()
+    def test_print_format(self):
+        expected = self.display.print_format('random')
+        pdb.set_trace()
+        self.assertEqual(expected, "    Format: random")
 
-
-    def __indent(self, text):
-        msg = self.indent + text
-        return(msg)
+if __name__ == '__main__':
+    unittest.main()
 
