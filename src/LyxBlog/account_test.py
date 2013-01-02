@@ -27,31 +27,45 @@
 
 # Code to test image.py
 
-import sys
 import unittest
 import pdb
-from display import Display
+from account import Account
 
-class DisplayTestCase(unittest.TestCase):
+class AccountTestCase(unittest.TestCase):
 
-    def setUp(self):
-        self.display = Display()
-    def test_print_format(self):
-        expected = self.display.print_format('random')
-        self.assertEqual(expected, "    Format: random")
-    def test_print_title(self):
-        expected = self.display.print_title('random')
-        self.assertEqual(expected, "    Title: random")
-    def test_print_word_count(self):
-        expected = self.display.print_word_count('random')
-        self.assertEqual(expected, "    Word Count: random")
-    def test_print_image_count(self):
-        expected = self.display.print_image_count('random')
-        self.assertEqual(expected, "    Image Count: random")
-    def test_ask_for_password(self):
-        print "\n\nIn a couple of lines you will be asked for a password. You must type something in before the test can proceed.\n\nPlease enter the word 'test'\n\n"
-        expected = self.display.ask_for_password()
-        self.assertEqual(expected, "test")
+    def test_initialization(self):
+        url = 'http://hi.com'
+        user = 'joe'
+        password = 'nobodys business'
+        section_id = 300
+        a = Account(section_id, url, user, password)
+        self.assertEqual(a._Account__section_id, 300)
+        self.assertEqual(a._Account__url, url)
+        self.assertEqual(a._Account__username, user)
+        self.assertEqual(a._Account__password, password)
+        self.assertEqual(a._Account__section_id, section_id)
+    def test_url(self):
+        url = 'blah'
+        a = Account(1, url, 'moose', 'long_underwear')
+        self.assertEqual(a.get_url(), url)
+    def test_username(self):
+        username = 'bones'
+        a = Account(1, 'http://hi.com', username, 'fancy_password')
+        self.assertEqual(a.get_username(), username)
+    def test_password(self):
+        a = Account(1, 'blah', 'barry', None)
+        self.assertEqual(a.get_password(), None)
+        password = 'password'
+        a.set_password(password)
+        self.assertEqual(a.get_password(), password)
+    def test_eq(self):
+        url = 'long one'
+        username = 'shirade'
+        password = 'long'
+        aa = Account(1, url, username, password)
+        bb = Account(1, url, username, password)
+        self.assertEqual(aa, bb)
+        
 
 if __name__ == '__main__':
     unittest.main()

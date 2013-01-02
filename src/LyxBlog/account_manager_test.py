@@ -27,31 +27,47 @@
 
 # Code to test image.py
 
-import sys
 import unittest
 import pdb
-from display import Display
+import sys
+from account import Account
+from account_manager import AccountManager
+from account_manager import SystemNotFoundError
 
-class DisplayTestCase(unittest.TestCase):
+class AccountManagerTestCase(unittest.TestCase):
 
-    def setUp(self):
-        self.display = Display()
-    def test_print_format(self):
-        expected = self.display.print_format('random')
-        self.assertEqual(expected, "    Format: random")
-    def test_print_title(self):
-        expected = self.display.print_title('random')
-        self.assertEqual(expected, "    Title: random")
-    def test_print_word_count(self):
-        expected = self.display.print_word_count('random')
-        self.assertEqual(expected, "    Word Count: random")
-    def test_print_image_count(self):
-        expected = self.display.print_image_count('random')
-        self.assertEqual(expected, "    Image Count: random")
-    def test_ask_for_password(self):
-        print "\n\nIn a couple of lines you will be asked for a password. You must type something in before the test can proceed.\n\nPlease enter the word 'test'\n\n"
-        expected = self.display.ask_for_password()
-        self.assertEqual(expected, "test")
+#    def test_initialization(self):
+#        a = AccountManager()
+#        path = a._AccountManager__configpath
+#        self.assertTrue(path.endswith(".lyxblogger/config.cfg"))
+#    def test_system_not_found_error(self):
+#        saved_platform = sys.platform
+#        sys.platform = 'spiderman'
+#        self.assertRaises(SystemNotFoundError, AccountManager)
+#        sys.platform = saved_platform
+#    def test_add_account(self):
+#        a = AccountManager()
+#        url = 'http://myblog.com'
+#        username = 'charles'
+#        password = 'not telling'
+#        a.add_account(url, username, password)
+#        accounts = a._AccountManager__accounts
+#        self.assertEquals(a._AccountManager__accounts[0], Account(url, username, password))
+    def test_save_accounts_to_file(self):
+        aa = AccountManager()
+        aa.reset_config()
+        url = 'http://cheeky.com'
+        username = 'mgh'
+        password = 'no fair yelling'
+        self.assertEqual(len(aa.get_accounts()), 0)
+        aa.add_account(url, username, password)
+        self.assertEqual(len(aa.get_accounts()), 1)
+        bb = AccountManager()
+        aa_account = aa.get_accounts()[0]
+        bb_account = bb.get_accounts()[0]
+        self.assertEquals(aa_account, bb_account)
+        
+        
 
 if __name__ == '__main__':
     unittest.main()

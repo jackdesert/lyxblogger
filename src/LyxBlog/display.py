@@ -25,13 +25,13 @@
 #                                                                      #
 ########################################################################
 
-import sys
+import sys, getpass
 
 class Display:
     def __init__(self):
         self.indent = 4 * ' ' 
 
-    def __pr3(self, text):
+    def __send(self, text):
         # Use sys.stdout instead of print so results can be used for automated testing
         # For some reason a newline character is required to flush ?
         # That's okay, because we'll use str.rstrip on the other side
@@ -39,15 +39,53 @@ class Display:
         sys.stdout.write(text + '\n')
         # Each line must be flushed so it can be read by the other side.
         sys.stdout.flush()
+        return text
       
     def print_format(self, in_format):
-        msg = "Format: {0}".format(in_format)
-        msg = self.__indent(msg)
-        self.__pr3(msg)
-        return(msg)
+        return self.__print_arbitrary('Format', in_format)
 
+    def print_title(self, in_title):
+        return self.__print_arbitrary('Title', in_title)
+
+    def print_word_count(self, in_count):
+        return self.__print_arbitrary('Word Count', in_count)
+
+    def print_image_count(self, in_count):
+        return self.__print_arbitrary('Image Count', in_count)
+
+    def ask_for_password(self):
+         self.__send('Please enter your password')
+         return self.__get_hidden_response()
+
+    def print_available_blogs(self, blogs):
+        msg = ''
+        counter = 1
+        for blog in blogs:
+            msg += "{0}. {1}\n".format(counter, blog.url)
+            counter += 1
+        return self.__send(msg)
+
+    def __print_blog(self, blog):
+
+        
+    def ask_which_blog(self):
+        
+
+    def __get_response(self):
+        return sys.stdin.readline().replace('\n', '')
+
+    def __get_hidden_response(self):
+        return getpass.getpass()
+
+
+    def __print_arbitrary(self, label, text, indent_level=1):
+        msg = self.indent * indent_level
+        msg += "{0}: {1}".format(label, text)
+        return self.__send(msg)
+        
+        
 
     def __indent(self, text):
         msg = self.indent + text
-        return(msg)
+        return msg
 
