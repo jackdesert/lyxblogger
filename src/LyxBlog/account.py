@@ -24,19 +24,40 @@
 #   along with LyXBlogger.  If not, see <http://www.gnu.org/licenses>. #
 #                                                                      #
 ########################################################################
+import re, pdb
 
 class Account:
-    def __init__(self, section_id, url, username, password):
-        self.__url = url
+    HTTP_BEGINNING = 'http://'
+    TAG_ENDING = '/xmlrpc.php'
+
+    def __init__(self, url, username, password):
+        self.__url = self.__format_url(url)
         self.__username = username
         self.__password = password 
-        self.__section_id = section_id
+        self.__section_id = None
+        self.__verify_init()
 
     def __eq__(self, other):
         return self.__url == other._Account__url and self.__username == other._Account__username and self.__password == other._Account__password
 
+    def __verify_init(self):
+        assert(isinstance(self.__url, str)), 'Account url must be a string'
+        assert(isinstance(self.__username, str)), 'Account username must be a string'
+        assert(isinstance(self.__password, str) or self.__password is None), 'Account password, if present, must be a string'
+
+    def set_section_id(self, id):
+        self.__section_id = id
+
     def set_password(self, password):
         self.__password = password
+
+    def __format_url(self, url):
+        base = url.replace(Account.HTTP_BEGINNING, '')
+        base = re.subn(r'^www\.', '', base)[0]
+        base = base.replace(Account.TAG_ENDING, '')
+        if base.endswith('/'):
+            base = base[:-1]
+        return base
 
     def get_section_id(self):
         return self.__section_id
@@ -46,6 +67,10 @@ class Account:
 
     def get_url(self):
         return self.__url
+
+    def get_full_url(self):
+        return Account.HTTP_BEGINNING + self.__url + Account.TAG_ENDING
+        
     def get_username(self):
         return self.__username
 

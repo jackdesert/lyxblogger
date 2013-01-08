@@ -27,39 +27,17 @@
 
 # Code to test image.py
 
-import sys
 import unittest
 import pdb
-from display import Display
-from account import Account
+import sys
+from lyxblogger import LyXBlogger
+from account_manager import AccountManager
 
-class DisplayTestCase(unittest.TestCase):
+class AccountManagerTestCase(unittest.TestCase):
 
-    def setUp(self):
-        self.display = Display()
-    def test_print_format(self):
-        expected = self.display.print_format('random')
-        self.assertEqual(expected, "    Format: random")
-    def test_print_title(self):
-        expected = self.display.print_title('random')
-        self.assertEqual(expected, "    Title: random")
-    def test_print_word_count(self):
-        expected = self.display.print_word_count('random')
-        self.assertEqual(expected, "    Word Count: random")
-    def test_print_image_count(self):
-        expected = self.display.print_image_count('random')
-        self.assertEqual(expected, "    Image Count: random")
-    def test_ask_for_password(self):
-        print "\n\nIn a couple of lines you will be asked for a password. You must type something in before the test can proceed.\n\nPlease enter the word 'test'\n\n"
-        expected = self.display.ask_for_password()
-        self.assertEqual(expected, "test")
-    def test_print_accounts(self):
-        account = Account('url', 'username', 'password')
-        account.set_section_id(1)
-        expected = "ACCOUNTS\nEnter the number next to the desired account.\n(**latest) N = New, D = Delete\n1. username@url  **"
-        result = self.display._Display__print_accounts([account], 1, False)
-        self.assertEqual(result, expected)
-
+   def test_initialize(self):
+        aa = LyXBlogger('file')
+        aa.start()
 
 if __name__ == '__main__':
     unittest.main()

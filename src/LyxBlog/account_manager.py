@@ -31,9 +31,13 @@ import sys, os, pdb
 from account import Account
 
 class AccountManager:
+
+    DEFAULT_ACCOUNT_ID = 0
+
     def __init__(self):
         self.__configpath  = self.__set_configpath()
         self.__config      = self.__init_config()
+        self.__default_account = self.__create_default_account()
         self.__accounts    = []
         self.__load_accounts_from_config()
 
@@ -47,25 +51,28 @@ class AccountManager:
 
     def __load_accounts_from_config(self):
         for section in self.__config.sections():
+            section_id = self.__next_id()
             url = self.__config.get(section, 'url')
             username = self.__config.get(section, 'username')
             password = self.__config.get(section, 'password')
-            self.add_account(url, username, password)
+            new_account = Account(url, username, password)
+            new_account.set_section_id(section_id)
+            self.add_account(new_account)
 
     def get_accounts(self):
-        return self.__accounts
+        return [self.__default_account] + self.__accounts
 
-    def add_account(self, url, username, password):
-        section_id = self.__next_id()
-        new_account = Account(section_id, url, username, password)
-        self.__accounts.append(new_account)
-        self.__add_account_to_config(new_account)
+    def add_account(self, account):
+        account.set_section_id(self.__next_id())
+        self.__accounts.append(account)
+        self.__add_account_to_config(account)
 
     def __next_id(self):
         return len(self.__accounts) + 1
 
     def __add_account_to_config(self, account):
-        id = str(account.get_section_id())
+        id = int(account.get_section_id()) # This will throw an exception if it's not a number
+        id = str(id)
         try:
             self.__config.add_section(id)
         except DuplicateSectionError:
@@ -81,6 +88,46 @@ class AccountManager:
         with open(self.__configpath, 'wb') as handle: 
             self.__config.write(handle)
 
+    def __create_default_account(self):
+        # we are not going to set the id, because we never save this
+        url = 'blogtest.letseatalready.com'
+        username = 'test'
+        password = 'test'
+        default_account = Account(url, username, password)
+        default_account.set_section_id(AccountManager.DEFAULT_ACCOUNT_ID)
+        return default_account
+
+    def get_recent_account(self):
+        id = self.get_recent_id()
+        id = int(id)
+        return self.get_account_by_id(id)
+
+    def __record_recent_account(self, id):
+        self.__config.set('DEFAULT', 'last_profile', str(id))
+        self.__save_config_to_file()
+
+    def get_recent_id(self):
+        id = self.__config.get('DEFAULT', 'last_profile')
+        return int(id) 
+
+    def get_account_by_id(self, id):
+        self.__record_recent_account(id)
+        if id == 0: return self.__default_account
+        return self.__accounts[id - 1]
+    
+    def delete_account_by_id(self, id):
+        offset_id = id - 1
+        del self.__accounts[offset_id]
+        self.__renumber_accounts()
+
+    def __renumber_accounts(self):
+        counter = 1
+        renumbered_accounts = []
+        for account in self.get_accounts():
+            account.set_section_id(counter)
+            counter += 1 
+            renumbered_accounts.append(account)
+        self.__accounts = renumbered_accounts
     def __init_config(self):
         config = ConfigParser.ConfigParser()
         if not os.path.exists(self.__configpath):

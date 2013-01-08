@@ -37,33 +37,32 @@ class AccountTestCase(unittest.TestCase):
         url = 'http://hi.com'
         user = 'joe'
         password = 'nobodys business'
-        section_id = 300
-        a = Account(section_id, url, user, password)
-        self.assertEqual(a._Account__section_id, 300)
-        self.assertEqual(a._Account__url, url)
+        a = Account(url, user, password)
+        self.assertEqual(a._Account__section_id, None)
+        self.assertEqual(a._Account__url, 'hi.com')
         self.assertEqual(a._Account__username, user)
         self.assertEqual(a._Account__password, password)
-        self.assertEqual(a._Account__section_id, section_id)
+        self.assertEqual(a._Account__section_id, None)
     def test_url(self):
         url = 'blah'
-        a = Account(1, url, 'moose', 'long_underwear')
-        self.assertEqual(a.get_url(), url)
+        aa = Account(url, 'moose', 'long_underwear')
+        self.assertEqual(aa.get_url(), url)
     def test_username(self):
         username = 'bones'
-        a = Account(1, 'http://hi.com', username, 'fancy_password')
-        self.assertEqual(a.get_username(), username)
+        aa = Account('http://hi.com', username, 'fancy_password')
+        self.assertEqual(aa.get_username(), username)
     def test_password(self):
-        a = Account(1, 'blah', 'barry', None)
-        self.assertEqual(a.get_password(), None)
+        aa = Account('blah', 'barry', None)
+        self.assertEqual(aa.get_password(), None)
         password = 'password'
-        a.set_password(password)
-        self.assertEqual(a.get_password(), password)
+        aa.set_password(password)
+        self.assertEqual(aa.get_password(), password)
     def test_eq(self):
         url = 'long one'
         username = 'shirade'
         password = 'long'
-        aa = Account(1, url, username, password)
-        bb = Account(1, url, username, password)
+        aa = Account(url, username, password)
+        bb = Account(url, username, password)
         self.assertEqual(aa, bb)
         
 

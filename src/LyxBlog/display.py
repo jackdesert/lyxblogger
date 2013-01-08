@@ -25,9 +25,12 @@
 #                                                                      #
 ########################################################################
 
-import sys, getpass
+import sys, getpass, pdb
 
 class Display:
+
+    MARKER = "  **"
+
     def __init__(self):
         self.indent = 4 * ' ' 
 
@@ -40,7 +43,34 @@ class Display:
         # Each line must be flushed so it can be read by the other side.
         sys.stdout.flush()
         return text
-      
+
+    def ask_for_new_username(self):
+        self.__send('\nCREATING NEW PROFILE.')
+        self.__send("\nUSERNAME")
+        while (1):
+            self.__send("Please enter your WordPress username")
+            username = self.__get_response()
+            if username != '': break
+        self.__send("Username is " + username + '.')
+        return username
+
+    def ask_for_new_url(self):
+        self.__send("\nURL")
+        while (1):
+            self.__send("Please enter your WordPress URL")
+            self.__send("Example: cool_site.wordpress.com")
+            url = self.__get_response()
+            if url != '': break
+        return url
+
+    def ask_for_new_password(self):
+        self.__send("\nPROMPT for PASSWORD?")
+        self.__send("Press ENTER now to be prompted each time (recommended).")
+        self.__send("Or type your precious password here, to be saved as plain text on you computer.")
+        password = getpass.getpass()
+        return password
+
+
     def print_format(self, in_format):
         return self.__print_arbitrary('Format', in_format)
 
@@ -57,19 +87,21 @@ class Display:
          self.__send('Please enter your password')
          return self.__get_hidden_response()
 
-    def print_available_blogs(self, blogs):
-        msg = ''
-        counter = 1
-        for blog in blogs:
-            msg += "{0}. {1}\n".format(counter, blog.url)
-            counter += 1
+    def ask_which_account(self, accounts, recent_id, delete=False):
+        self.__print_accounts(accounts, recent_id, delete)
+        return self.__get_response()
+
+    def __print_accounts(self, accounts, recent_id, delete):
+        msg =  'ACCOUNTS\n'
+        if delete:
+            msg += 'Enter the number next the the account to delete\n'
+        else:
+            msg += 'Enter the number next to the desired account.\n'
+            msg += '(**latest) N = New, D = Delete'
+        for account in accounts:
+            msg += "\n{0}. {1}@{2}".format(account.get_section_id(), account.get_username(), account.get_url())
+            if account.get_section_id() == recent_id: msg += Display.MARKER
         return self.__send(msg)
-
-    def __print_blog(self, blog):
-
-        
-    def ask_which_blog(self):
-        
 
     def __get_response(self):
         return sys.stdin.readline().replace('\n', '')
@@ -89,3 +121,7 @@ class Display:
         msg = self.indent + text
         return msg
 
+    def print_unrecognized_response(self, response):
+        msg = "\nUNRECOGNIZED RESPONSE: '{0}'".format(response) 
+        return self.__send(msg)
+        
